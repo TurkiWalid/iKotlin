@@ -17,6 +17,7 @@ public class LoginActivity extends AppCompatActivity {
 
         /*** disabling actionBar ****/
         getSupportActionBar().hide();
+
         findViewById(R.id.confirmLogin_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
