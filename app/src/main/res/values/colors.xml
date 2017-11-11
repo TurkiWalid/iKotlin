@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#f3f3f3</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <!--- for the fiewFlipper/circlePageIndicator -->
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+
+
+</resources>
