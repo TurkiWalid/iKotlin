@@ -9,13 +9,16 @@ import com.androidprojects.esprit.ikotlin.fragments.ConnectFragment;
 import com.androidprojects.esprit.ikotlin.fragments.LearnFragment;
 import com.androidprojects.esprit.ikotlin.fragments.ShareFragment;
 
+/**
+ * Created by Amal on 11/11/2017.
+ */
 
-public class HomePageTabs_Adapter extends FragmentPagerAdapter {
+public class ProfileTabs_Adapter extends FragmentPagerAdapter {
 
     private int NUM_ITEMS = 4;
-    private String[] titles= new String[]{"Learn", "Share","Compete","Connect"};
+    private String[] titles= new String[]{"Activity", "0\nSkills","0\nBadges","0\nCompetitions"};
 
-    public HomePageTabs_Adapter(FragmentManager fm) {
+    public ProfileTabs_Adapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -43,8 +46,8 @@ public class HomePageTabs_Adapter extends FragmentPagerAdapter {
     }
 
     // Returns the page title for the top indicator
-    /*@Override
+    @Override
     public CharSequence getPageTitle(int position) {
         return  titles[position];
-    }*/
+    }
 }
