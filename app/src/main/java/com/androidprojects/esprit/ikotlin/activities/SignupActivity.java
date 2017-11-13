@@ -20,6 +20,7 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         /** disabling actionBar **/
+
         getSupportActionBar().hide();
 
     }
