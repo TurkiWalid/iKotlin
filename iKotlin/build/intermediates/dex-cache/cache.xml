@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\.android\build-cache\5cb3b2a74a60baef63e478ad2f1460eb9c9afae1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\classes_6bef35ab4753724784931f933667f456fe868678.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\.android\build-cache\a339dc0f8613675897ea95b6d8dbcfd3114d6bad\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\classes_50849fd733165f93e2dab3e228a52f6cc6a18a65.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\.android\build-cache\258c6747b43263b82bcdd5a23e8885838e3b0696\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\classes_7110658de0322df75eb2f31e9f782542f83695d5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\.android\build-cache\fa45b607ff45b19054753a8935e4e4f37f3f187f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\classes_aa2df525e415b2fec35e1b85feff2e82a003cbcd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\.android\build-cache\165191734bfb21577fcb98cfe83d0c0948ebf934\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\classes_5f76d0cdd6df331ef15e1ed9df0c5a38c359663a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\.android\build-cache\b558580436fde9860cfa1c5b7b0ebabe31e69e96\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\classes_1d31629200c0ec4910d9e97f0f1ec8c193a48733.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\.android\build-cache\cb48c15105cd439aa3cd6dea2fcccaa26428e2f2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\classes_55a18d02364ef5fbcda61a02501836dcbe173f7b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\.android\build-cache\b59e6abc2ad8bdd9fb7712674f4d12daf211a4e3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\classes_cc7fca277bd7c2b14ea52f364fe35cec3937be45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\.android\build-cache\f39d285a3cf3a4bb241f17d49e0e57c3ece1b0c6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\classes_e0226d7402d9ddf6f2e1e948f6d6f175602b5be2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\.android\build-cache\a5c7ddbf435e01415b09ea7f9336e25276ca5d0e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\classes_54a419327bdeff7990a352c619a2eb89130bc3d2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\.android\build-cache\f3213583905d623df77a51c3da0bb6aee7a771bc\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\classes_42dfe635033f1833bec77241371a655c313c2e31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\support-annotations-26.0.0-alpha1_52f69db614fa16023e81bf2028b4240d9069ed72.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\twlid\.android\build-cache\40c53a0e780195a8da81a6bc91862c14e1bcd0bc\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="E:\4eme\Workspace\Android\iKotlin\app\build\intermediates\pre-dexed\debug\classes_427aefa535f86606ab491779df3c7c6fc3e6e9ca.jar" />
+    </item>
+
+</items>
