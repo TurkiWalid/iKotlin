@@ -25,4 +25,19 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+/** ---------- FIREBASE (or mysql?) LOGIN --------- **/
+public void login(View view){
+
+}
+
+/** ---------- LINKEDIN LOGIN --------- **/
+public void loginWithLinkedIn(View view){
+
+}
+
+/** ---------- FACEBOOK LOGIN --------- **/
+public void loginWithFacebook(View view){
+
+}
 }
