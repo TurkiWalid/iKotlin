@@ -268,7 +268,6 @@ public class CirclePageIndicator extends View {
      * @return The width of the view, honoring constraints from measureSpec
      */
     private int measureLong(int measureSpec) {
-        int a;
         int result;
         int specMode = MeasureSpec.getMode(measureSpec);
         int specSize = MeasureSpec.getSize(measureSpec);
