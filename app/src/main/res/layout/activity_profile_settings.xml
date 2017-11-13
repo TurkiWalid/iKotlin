@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        android:background="@drawable/listviews_background">
+
+        <ImageButton
+            android:id="@+id/userImg"
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circularbgrd_initialicons"
+            android:scaleType="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_profile"/>
+        <ImageButton
+            android:id="@+id/removeImgBtn"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_toRightOf="@id/userImg"
+            android:layout_marginLeft="-35dp"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:scaleType="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_remove"/>
+        <TextView
+            android:id="@+id/changePicTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/userImg"
+            android:layout_centerHorizontal="true"
+            android:text="Change Avatar "/>
+        <EditText
+            android:id="@+id/changeNameTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/changePicTxt"
+            android:hint="Name"/>
+        <EditText
+            android:id="@+id/changeEmailTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/changeNameTxt"
+            android:hint="Email"/>
+        <EditText
+            android:id="@+id/changeCountryTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/changeEmailTxt"
+            android:hint="Country"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:gravity="right|center"
+            android:background="@null"
+            android:layout_below="@+id/changeCountryTxt"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

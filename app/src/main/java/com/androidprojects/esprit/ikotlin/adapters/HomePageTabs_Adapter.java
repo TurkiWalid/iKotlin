@@ -43,8 +43,8 @@ public class HomePageTabs_Adapter extends FragmentPagerAdapter {
     }
 
     // Returns the page title for the top indicator
-    @Override
+    /*@Override
     public CharSequence getPageTitle(int position) {
         return  titles[position];
-    }
+    }*/
 }

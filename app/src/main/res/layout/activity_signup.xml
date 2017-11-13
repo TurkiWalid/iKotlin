@@ -22,16 +22,21 @@
             android:layout_height="wrap_content"
             android:text="Join a community of iKotliners"
             android:gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:textSize="60px"
             style="bold"/>
 
         <EditText
-            android:id="@+id/emailText_login"
+            android:id="@+id/emailText_signup"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="50px"
-            android:hint=" E-mail" />
+            android:layout_marginTop="30px"
+            android:hint="E-mail" />
+        <EditText
+            android:id="@+id/userNameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Username"/>
         <EditText
             android:id="@+id/pswText"
             android:layout_width="match_parent"
@@ -45,7 +50,7 @@
             android:layout_marginTop="60px"
             android:layout_height="40dp"
             android:background="#ea7b3f"
-            android:text="Log in"/>
+            android:text="Sign up"/>
 
     </LinearLayout>
 
