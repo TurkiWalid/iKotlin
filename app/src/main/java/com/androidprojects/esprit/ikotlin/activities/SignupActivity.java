@@ -32,7 +32,7 @@ public class SignupActivity extends AppCompatActivity {
 
 /** ---------- LINKEDIN SIGNUP --------- **/
 
-    public void SignUpWithLinkedIn(View view){
+    public void signUpWithLinkedIn(View view){
         LISessionManager.getInstance(getApplicationContext())
                 .init(this, buildScope(), new AuthListener() {
                     @Override

@@ -7,8 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:gravity="center_horizontal"
-    android:background="#f3f3f3">
+    android:gravity="center_horizontal">
 
     <!-- form -->
     <LinearLayout
@@ -22,6 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Log in to iKotlin"
+            android:textColor="#3F5991"
             android:layout_marginTop="15dp"
             android:textSize="60px"
             style="bold"/>
@@ -31,12 +31,13 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="50px"
+            android:textColorHint="#3F5991"
             android:hint=" E-mail" />
         <EditText
             android:id="@+id/pswText"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="30px"
+            android:textColorHint="#3F5991"
             android:password="true"
             android:hint="Password"/>
         <Button
@@ -44,7 +45,10 @@
             android:layout_width="match_parent"
             android:layout_marginTop="60px"
             android:layout_height="40dp"
-            android:background="#ea7b3f"
+            android:textStyle="bold"
+            android:textSize="7pt"
+            android:textColor="#3F5991"
+            android:background="#FFC717"
             android:text="Log in"/>
 
         <TextView
@@ -53,6 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30px"
             android:textSize="30px"
+            android:textColor="#3F5991"
             android:text="Forgot password?"
             style="bold"/>
     </LinearLayout>
@@ -92,6 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#3B5998"
+            android:textColor="#FFFFFF"
             android:drawableLeft="@drawable/facebook_loginbtn"
             android:paddingLeft="10dp"
             android:text="Log in with Facebook"/>
@@ -102,6 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20px"
             android:background="#007bb6"
+            android:textColor="#FFFFFF"
             android:drawableLeft="@drawable/facebook_linkedinbtn"
             android:paddingLeft="10dp"
             android:text="Login with Linkedin" />

@@ -11,35 +11,35 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:orientation="horizontal"
-        android:background="#f3f3f3">
-
+        android:background="#f3f3f3"
+        android:orientation="horizontal">
 
 
         <ImageButton
             android:id="@+id/profileSettingsBtn"
-            android:src="@drawable/ic_settings"
             android:layout_width="120px"
             android:layout_height="120px"
             android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
             android:background="@null"
-            android:layout_alignParentTop="true" />
+            android:src="@drawable/ic_settings" />
 
         <ImageButton
             android:id="@+id/userImg"
             android:layout_width="160px"
             android:layout_height="160px"
             android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
             android:background="@drawable/circularbgrd_initialicons"
             android:scaleType="center"
-            android:adjustViewBounds="true"
-            android:src="@drawable/ic_profile"/>
+            android:src="@drawable/ic_profile" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/userImg"
             android:layout_centerInParent="true"
-            android:text="Amal HICHRI "/>
+            android:text="Amal HICHRI " />
 
     </RelativeLayout>
 

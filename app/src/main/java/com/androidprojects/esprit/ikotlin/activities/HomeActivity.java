@@ -6,6 +6,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,7 +28,8 @@ public class HomeActivity extends AppCompatActivity {
 
         /** remove back btn from actionBar **/
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setTitle("Learn");
+        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#696969\">" + "Learn" + "</font>")));
+
 
         /*** setting the tabsLayout ***/
         ViewPager vpPager = (ViewPager) findViewById(R.id.viewpager);
@@ -48,16 +50,16 @@ public class HomeActivity extends AppCompatActivity {
                 Log.d("TAB SELECTED:",String.valueOf(tablayout.getSelectedTabPosition()));
                 switch(tablayout.getSelectedTabPosition()) {
                     case 0:
-                        getSupportActionBar().setTitle("Learn");
+                        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#696969\">" + "Learn" + "</font>")));
                         break;
                     case 1:
-                        getSupportActionBar().setTitle("Share");
+                        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#696969\">" + "Share" + "</font>")));
                         break;
                     case 2:
-                        getSupportActionBar().setTitle("Compete");
+                        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#696969\">" + "Complete" + "</font>")));
                         break;
                     case 3:
-                        getSupportActionBar().setTitle("Connect");
+                        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#696969\">" + "Connect" + "</font>")));
                         break;
                 }
             }

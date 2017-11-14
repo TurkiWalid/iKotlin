@@ -9,7 +9,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#f3f3f3"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context="com.androidprojects.esprit.ikotlin.activities.MainActivity">
@@ -37,14 +36,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingRight="20px"
-            android:paddingLeft="20px"
+            android:padding="20dp"
             android:gravity="center_horizontal">
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/circularbgrd_initialicons"
+                android:layout_marginTop="30dp"
                 android:src="@drawable/learn"
                 android:scaleType="center"
                 android:adjustViewBounds="true"/>
@@ -52,15 +49,17 @@
                 android:text="Learn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="25pt"
-                android:textColor="#3e82dc"/>
+                android:layout_marginTop="-25dp"
+                android:textSize="18pt"
+                android:fontFamily="serif"
+                android:textColor="#3F5991"/>
             <TextView
                 android:text="Kotlin basics right at your finger tips"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="9pt"
                 android:gravity="center_horizontal"
-                android:textColor="#3e82dc"
+                android:textColor="#3F5991"
                 />
         </LinearLayout>
         <!-- second view: Code -->
@@ -68,34 +67,30 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingRight="20px"
-            android:paddingLeft="20px"
-            android:gravity="center">
+            android:padding="20dp"
+            android:gravity="center_horizontal">
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/circularbgrd_initialicons"
+                android:layout_marginTop="30dp"
                 android:src="@drawable/code"
                 android:scaleType="center"
                 android:adjustViewBounds="true"/>
             <TextView
                 android:text="Code"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="20"
-                android:padding="10px"
-                android:textSize="25pt"
-                android:textColor="#3e82dc"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-25dp"
+                android:textSize="18pt"
+                android:fontFamily="serif"
+                android:textColor="#3F5991"/>
             <TextView
-                android:text="Write and run code on your mobie \n Java-Kotlin code conversion"
+                android:text="Write and run code on your mobile \n Java-Kotlin code conversion"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="20"
-                android:padding="10px"
+                android:layout_height="wrap_content"
                 android:textSize="9pt"
-                android:textColor="#3e82dc"
                 android:gravity="center_horizontal"
+                android:textColor="#3F5991"
                 android:singleLine="false"
                 />
         </LinearLayout>
@@ -104,35 +99,33 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingRight="20px"
-            android:paddingLeft="20px"
-            android:gravity="center">
+            android:padding="20dp"
+            android:gravity="center_horizontal">
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/circularbgrd_initialicons"
+                android:layout_marginTop="30dp"
                 android:src="@drawable/compete"
                 android:scaleType="center"
+                android:fontFamily="serif"
                 android:adjustViewBounds="true"
                 />
             <TextView
                 android:text="Compete"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="20"
-                android:padding="10px"
-                android:textSize="25pt"
-                android:textColor="#3e82dc"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-25dp"
+                android:textSize="18pt"
+                android:fontFamily="serif"
+                android:textColor="#3F5991"/>
             <TextView
                 android:text="Beat iKotliners and hold the Trophy! "
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="20"
-                android:padding="10px"
+                android:layout_height="wrap_content"
                 android:textSize="9pt"
                 android:gravity="center_horizontal"
-                android:textColor="#3e82dc"
+                android:textColor="#3F5991"
+                android:singleLine="false"
                 />
         </LinearLayout>
         <!-- fourth view: Discuss -->
@@ -140,35 +133,31 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingRight="20px"
-            android:paddingLeft="20px"
-            android:gravity="center"
+            android:padding="20dp"
+            android:gravity="center_horizontal"
             >
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:src="@drawable/discuss"
-                android:background="@drawable/circularbgrd_initialicons"
                 android:scaleType="center"
                 android:adjustViewBounds="true"/>
             <TextView
                 android:text="Discuss"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="20"
-                android:padding="10px"
-                android:textSize="25pt"
-                android:textColor="#3e82dc"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-25dp"
+                android:textSize="18pt"
+                android:fontFamily="serif"
+                android:textColor="#3F5991"/>
             <TextView
                 android:text="Ask questions and give answers in our forum"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="20"
-                android:padding="10px"
-                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
                 android:textSize="9pt"
-                android:textColor="#3e82dc"
+                android:gravity="center_horizontal"
+                android:textColor="#3F5991"
                 android:singleLine="false"
                 />
         </LinearLayout>
@@ -197,7 +186,9 @@
             android:layout_margin="5dp"
             android:text="Login"
             android:textStyle="bold"
-            android:background="#ea7b3f"
+            android:textSize="7pt"
+            android:textColor="#3F5991"
+            android:background="#FFC717"
             android:onClick="onClick">
         </Button>
         <Button
@@ -206,7 +197,9 @@
             android:layout_width="match_parent"
             android:text="Sign up"
             android:textStyle="bold"
-            android:background="#80ea7b3f"
+            android:textSize="7pt"
+            android:textColor="#3F5991"
+            android:background="#CFE0CE"
             android:layout_margin="5dp"
             android:onClick="onClick">
         </Button>
