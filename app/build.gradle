@@ -28,5 +28,10 @@ dependencies {
     compile 'com.android.support:support-v4:26.+'
     compile 'com.android.support:design:26.0.+'
     testCompile 'junit:junit:4.12'
+    // linkedin API
     compile project(path: ':linkedin-sdk')
+    // to deserialize/serialize json ibjects returned by LINKEDIN API
+    compile 'com.google.code.gson:gson:2.8.2'
+    // to set imageView's src with url for linkedin API
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }
