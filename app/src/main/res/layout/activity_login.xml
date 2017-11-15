@@ -49,6 +49,7 @@
             android:textSize="7pt"
             android:textColor="#3F5991"
             android:background="#FFC717"
+            android:onClick="login"
             android:text="Log in"/>
 
         <TextView
