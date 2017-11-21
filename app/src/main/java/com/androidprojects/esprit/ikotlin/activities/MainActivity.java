@@ -11,12 +11,14 @@ import android.widget.ViewFlipper;
 import com.androidprojects.esprit.ikotlin.R;
 import com.androidprojects.esprit.ikotlin.utils.CirclePageIndicator;
 import com.androidprojects.esprit.ikotlin.utils.CustomGestureListener;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends Activity implements GestureDetector.OnDoubleTapListener, View.OnClickListener  {
 
     private ViewFlipper vf;
     private CirclePageIndicator circlePageIndicator;
     private GestureDetector gestureDecirclePageIndicator;
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,17 @@ public class MainActivity extends Activity implements GestureDetector.OnDoubleTa
 
         /** loading menu_main ui **/
         setContentView(R.layout.activity_main);
+
+        /** check if user is connected **/
+        auth=FirebaseAuth.getInstance();
+            if(auth.getCurrentUser()!=null){
+                //clear backstack
+                finishAffinity();
+                //start intent
+                Intent intent = new Intent(this, HomeActivity.class);
+                startActivity(intent);
+                finish(); // call this to finish the current activity
+            }
 
         /*** Set the flipper view ***/
         vf = findViewById(R.id.vwFlp);

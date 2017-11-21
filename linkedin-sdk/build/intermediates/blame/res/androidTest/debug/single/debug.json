@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\Amal\\Documents\\AndroidProjects\\iKotlin\\linkedin-sdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_ic_launcher.png.flat",
-        "source": "C:\\Users\\Amal\\Documents\\AndroidProjects\\iKotlin\\linkedin-sdk\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+        "merged": "E:\\4eme\\Workspace\\Android\\iKotlin\\linkedin-sdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_ic_launcher.png.flat",
+        "source": "E:\\4eme\\Workspace\\Android\\iKotlin\\linkedin-sdk\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Amal\\Documents\\AndroidProjects\\iKotlin\\linkedin-sdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_ic_launcher.png.flat",
-        "source": "C:\\Users\\Amal\\Documents\\AndroidProjects\\iKotlin\\linkedin-sdk\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
+        "merged": "E:\\4eme\\Workspace\\Android\\iKotlin\\linkedin-sdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_ic_launcher.png.flat",
+        "source": "E:\\4eme\\Workspace\\Android\\iKotlin\\linkedin-sdk\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Amal\\Documents\\AndroidProjects\\iKotlin\\linkedin-sdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_ic_launcher.png.flat",
-        "source": "C:\\Users\\Amal\\Documents\\AndroidProjects\\iKotlin\\linkedin-sdk\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ic_launcher.png"
+        "merged": "E:\\4eme\\Workspace\\Android\\iKotlin\\linkedin-sdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_ic_launcher.png.flat",
+        "source": "E:\\4eme\\Workspace\\Android\\iKotlin\\linkedin-sdk\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Amal\\Documents\\AndroidProjects\\iKotlin\\linkedin-sdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_ic_launcher.png.flat",
-        "source": "C:\\Users\\Amal\\Documents\\AndroidProjects\\iKotlin\\linkedin-sdk\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\ic_launcher.png"
+        "merged": "E:\\4eme\\Workspace\\Android\\iKotlin\\linkedin-sdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_ic_launcher.png.flat",
+        "source": "E:\\4eme\\Workspace\\Android\\iKotlin\\linkedin-sdk\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ic_launcher.png"
     }
 ]

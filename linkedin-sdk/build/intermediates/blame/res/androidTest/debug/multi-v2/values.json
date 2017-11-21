@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Amal\\Documents\\AndroidProjects\\iKotlin\\linkedin-sdk\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+            "outputFile": "E:\\4eme\\Workspace\\Android\\iKotlin\\linkedin-sdk\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Amal\\Documents\\AndroidProjects\\iKotlin\\linkedin-sdk\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "source": "E:\\4eme\\Workspace\\Android\\iKotlin\\linkedin-sdk\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

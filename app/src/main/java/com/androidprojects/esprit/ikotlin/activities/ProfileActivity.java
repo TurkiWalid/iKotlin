@@ -43,9 +43,9 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         /** fields data **/
-        ((TextView) findViewById(R.id.fullNameInProfile)).setText(SignupActivity.user.getFirstName()+" "+SignupActivity.user.getLastName());
+      //  ((TextView) findViewById(R.id.fullNameInProfile)).setText(SignupActivity.user.getFirstName()+" "+SignupActivity.user.getLastName());
         //((ImageView)findViewById(R.id.userImgProfile)).setImageURI(Uri.parse("android.resource://com.androidprojects.esprit.ikotlin/"+R.drawable.tesimg));
-        Picasso.with(getApplicationContext()).load(SignupActivity.user.getPicUrl()).into((ImageView)findViewById(R.id.userImgProfile));
+      //  Picasso.with(getApplicationContext()).load(SignupActivity.user.getPicUrl()).into((ImageView)findViewById(R.id.userImgProfile));
 
 
     }
