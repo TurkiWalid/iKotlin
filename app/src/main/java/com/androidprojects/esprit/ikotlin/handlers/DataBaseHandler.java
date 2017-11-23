@@ -16,6 +16,9 @@ import java.util.Calendar;
 
 public class DataBaseHandler extends SQLiteOpenHelper {
 
+
+    // just a test comment
+
     //Database version
     public static final int DATABASE_VERSION=1;
     //Database name
