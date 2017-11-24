@@ -1,15 +1,19 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
     tools:context="com.androidprojects.esprit.ikotlin.fragments.ShareFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText android:id="@+id/inputSearch_shareLv"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textSize="16dp"
-        android:text="Share fragment\n\nthe forum .. answers/questions ect..." />
+        android:hint="Search..."
+        android:inputType="textVisiblePassword"/>
 
-</FrameLayout>
+    <ListView
+        android:id="@+id/shareLv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

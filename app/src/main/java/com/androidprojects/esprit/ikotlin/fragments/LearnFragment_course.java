@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 import com.androidprojects.esprit.ikotlin.R;
-import com.androidprojects.esprit.pralloid.Parallaxor;
+import com.tn.amalhichri.library.Parallaxor;
 
 
 public class LearnFragment_course extends Fragment {

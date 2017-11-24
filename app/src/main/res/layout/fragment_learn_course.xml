@@ -155,7 +155,7 @@
     </LinearLayout>
 
     <!-- this will be changed into a parallax listView when we'll have dynamic data -->s
-    <com.androidprojects.esprit.pralloid.views.ParallaxScrollView
+    <com.tn.amalhichri.library.views.ParallaxScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -557,6 +557,6 @@
                     android:textSize="6dp"/>
             </RelativeLayout>
         </LinearLayout>
-    </com.androidprojects.esprit.pralloid.views.ParallaxScrollView>
+    </com.tn.amalhichri.library.views.ParallaxScrollView>
     </FrameLayout>
 

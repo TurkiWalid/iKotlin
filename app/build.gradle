@@ -43,8 +43,7 @@ dependencies {
     // to set imageView's src with url for linkedin API
     compile 'com.squareup.picasso:picasso:2.5.2'
     // for the course ui ( the scrollbar ) -- to review --
-    compile project(path: ':paralloid')
-       //compile 'com.github.AmalH:Paralloid:0.0.1'
+    compile 'com.github.AmalLibs:Paralloid:1.0.0'
     // number progress
     compile 'com.daimajia.numberprogressbar:library:1.4@aar'
     // material design library
@@ -55,7 +54,6 @@ dependencies {
     // circular imageView
     compile 'de.hdodenhof:circleimageview:2.2.0'
     // to change selected tab's icon
-
 
 
     /********** for database **********/
