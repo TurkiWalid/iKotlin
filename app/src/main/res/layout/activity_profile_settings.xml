@@ -18,7 +18,6 @@
             android:layout_width="160px"
             android:layout_height="160px"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/circularbgrd_initialicons"
             android:scaleType="center"
             android:adjustViewBounds="true"
             android:src="@drawable/ic_profile"/>

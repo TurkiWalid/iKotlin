@@ -1,6 +1,5 @@
 package com.androidprojects.esprit.ikotlin.models;
 
-import java.sql.Timestamp;
 import java.util.Calendar;
 
 /**
@@ -9,7 +8,7 @@ import java.util.Calendar;
 
 public class User {
 
-    private String id,username,email,pictureUrl;
+    private String id,username,email,pictureUrl,firstName,lastName;
     private Calendar created,last_loggued;
     private boolean confirmed;
     private int skill_learner,skill_challenger,skill_coder;
@@ -54,7 +53,7 @@ public class User {
         this.email = email;
     }
 
-    public String getPictureUrl() {
+    public String getPictureURL() {
         return pictureUrl;
     }
 
@@ -106,6 +105,26 @@ public class User {
         return skill_coder;
     }
 
+    public void setPicUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public void setSkill_coder(int skill_coder) {
         this.skill_coder = skill_coder;
     }
@@ -117,6 +136,8 @@ public class User {
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", pictureUrl='" + pictureUrl + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", created=" + created +
                 ", last_loggued=" + last_loggued +
                 ", confirmed=" + confirmed +

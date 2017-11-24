@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.androidprojects.esprit.ikotlin.fragments.CompeteFragment;
 import com.androidprojects.esprit.ikotlin.fragments.ConnectFragment;
-import com.androidprojects.esprit.ikotlin.fragments.LearnFragment;
+import com.androidprojects.esprit.ikotlin.fragments.RootFragment_learn;
 import com.androidprojects.esprit.ikotlin.fragments.ShareFragment;
 
 
@@ -30,13 +30,14 @@ public class HomePageTabs_Adapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new LearnFragment();
+                return new RootFragment_learn(); // because to switch fragments inside a tab we need a root FrameLayout,
+                                                // in which we load fragments in each time ( getFragmentManager.replce(root,newFrag) )
             case 1:
-                return new ShareFragment();
+                return new ShareFragment();   // to change to root fragment share
             case 2:
-                return new CompeteFragment();
+                return new CompeteFragment();  // to change to root fragment compete
             case 3:
-                return new ConnectFragment();
+                return new ConnectFragment();  // to change to root fragment connect
             default:
                 return null;
         }

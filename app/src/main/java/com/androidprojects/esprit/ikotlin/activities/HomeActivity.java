@@ -1,6 +1,8 @@
 package com.androidprojects.esprit.ikotlin.activities;
 
 import android.content.Intent;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
@@ -20,53 +22,63 @@ public class HomeActivity extends AppCompatActivity {
     private TabLayout tablayout;
     private Menu menu;
     private FragmentManager fgManager;
+    private ColorMatrixColorFilter filter;
+    private ColorMatrix matrix;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        /** remove back btn from actionBar **/
+        /** will be used to change tab icons colors on select/deselect */
+        matrix = new ColorMatrix();
+        matrix.setSaturation(0);
+        filter = new ColorMatrixColorFilter(matrix);
+
+        /** setting the actionBar **/
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#696969\">" + "Learn" + "</font>")));
+        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#FFB417\" face=\"serif\" face=\"serif\">" + "<b>Learn</b>" + "</font>")));
+        getSupportActionBar().setElevation(0);
 
 
         /*** setting the tabsLayout ***/
+
         ViewPager vpPager = (ViewPager) findViewById(R.id.viewpager);
         myAdapter = new HomePageTabs_Adapter(getSupportFragmentManager());
         vpPager.setAdapter(myAdapter);
         tablayout=(TabLayout)findViewById(R.id.tabsLayout);
         tablayout.setupWithViewPager(vpPager);
-        tablayout=(TabLayout) findViewById(R.id.tabsLayout);
-        tablayout.getTabAt(0).setIcon(R.drawable.learn_icon);
-        tablayout.getTabAt(1).setIcon(R.drawable.share_icon);
-        tablayout.getTabAt(2).setIcon(R.drawable.compete_icon);
-        tablayout.getTabAt(3).setIcon(R.drawable.connect_icon);
+        tablayout.getTabAt(0).setIcon(R.drawable.ic_learn_tab0);
+        tablayout.getTabAt(1).setIcon(R.drawable.ic_share_tab1);
+        tablayout.getTabAt(2).setIcon(R.drawable.ic_compete_tab2);
+        tablayout.getTabAt(3).setIcon(R.drawable.ic_connect_tab3);
+        allTabIconsToDeselected(tablayout);
 
         /** change title in actionBar depending on tabSelected **/
         tablayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 Log.d("TAB SELECTED:",String.valueOf(tablayout.getSelectedTabPosition()));
+                tab.getIcon().clearColorFilter();
                 switch(tablayout.getSelectedTabPosition()) {
                     case 0:
-                        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#696969\">" + "Learn" + "</font>")));
+                        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#FFB417\" face=\"serif\">" + "<b>Learn</b>" + "</font>")));
                         break;
                     case 1:
-                        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#696969\">" + "Share" + "</font>")));
+                        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#FFB417\" face=\"serif\">" + "<b>Share</b>" + "</font>")));
                         break;
                     case 2:
-                        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#696969\">" + "Complete" + "</font>")));
+                        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#FFB417\" face=\"serif\">" + "<b>Complete</b>" + "</font>")));
                         break;
                     case 3:
-                        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#696969\">" + "Connect" + "</font>")));
+                        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#FFB417\" face=\"serif\">" + "<b>Connect</b>" + "</font>")));
                         break;
                 }
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
+                tab.getIcon().setColorFilter(filter);
             }
 
             @Override
@@ -99,5 +111,13 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    /*** helper methods ***/
+    private void allTabIconsToDeselected(TabLayout tablayout){
+        for(int i=1;i<4;i++){
+            tablayout.getTabAt(i).getIcon().setColorFilter(filter);
+        }
     }
 }

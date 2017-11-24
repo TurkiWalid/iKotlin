@@ -52,14 +52,16 @@
                 android:layout_marginTop="-25dp"
                 android:textSize="18pt"
                 android:fontFamily="serif"
-                android:textColor="#3F5991"/>
+                android:textColor="@color/text_color_1"/>
             <TextView
                 android:text="Kotlin basics right at your finger tips"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="9pt"
+                android:layout_marginTop="8dp"
+                android:textSize="8.5pt"
+                android:textStyle="italic"
                 android:gravity="center_horizontal"
-                android:textColor="#3F5991"
+                android:textColor="@color/text_color_1"
                 />
         </LinearLayout>
         <!-- second view: Code -->
@@ -83,14 +85,16 @@
                 android:layout_marginTop="-25dp"
                 android:textSize="18pt"
                 android:fontFamily="serif"
-                android:textColor="#3F5991"/>
+                android:textColor="@color/text_color_1"/>
             <TextView
                 android:text="Write and run code on your mobile \n Java-Kotlin code conversion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:textSize="9pt"
+                android:textStyle="italic"
                 android:gravity="center_horizontal"
-                android:textColor="#3F5991"
+                android:textColor="@color/text_color_1"
                 android:singleLine="false"
                 />
         </LinearLayout>
@@ -117,15 +121,17 @@
                 android:layout_marginTop="-25dp"
                 android:textSize="18pt"
                 android:fontFamily="serif"
-                android:textColor="#3F5991"/>
+                android:textColor="@color/text_color_1"/>
             <TextView
                 android:text="Beat iKotliners and hold the Trophy! "
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="9pt"
+                android:layout_marginTop="8dp"
+                android:textSize="8.5pt"
+                android:textStyle="italic"
                 android:gravity="center_horizontal"
-                android:textColor="#3F5991"
-                android:singleLine="false"
+                android:textColor="@color/text_color_1"
+                android:singleLine="true"
                 />
         </LinearLayout>
         <!-- fourth view: Discuss -->
@@ -150,14 +156,16 @@
                 android:layout_marginTop="-25dp"
                 android:textSize="18pt"
                 android:fontFamily="serif"
-                android:textColor="#3F5991"/>
+                android:textColor="@color/text_color_1"/>
             <TextView
-                android:text="Ask questions and give answers in our forum"
+                android:text="Ask questions and give answers \n in our forum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:textSize="9pt"
+                android:textStyle="italic"
                 android:gravity="center_horizontal"
-                android:textColor="#3F5991"
+                android:textColor="@color/text_color_1"
                 android:singleLine="false"
                 />
         </LinearLayout>
@@ -178,30 +186,27 @@
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="25"
-        android:orientation="vertical">
-        <Button
+        android:orientation="vertical"
+        android:paddingBottom="0dp">
+        <com.gc.materialdesign.views.ButtonRectangle
             android:id="@+id/loginBtn"
-            android:layout_height="100px"
+            android:layout_height="120px"
             android:layout_width="match_parent"
-            android:layout_margin="5dp"
             android:text="Login"
-            android:textStyle="bold"
-            android:textSize="7pt"
-            android:textColor="#3F5991"
+            android:textSize="5pt"
+            android:textColor="@color/text_color_1"
             android:background="#FFC717"
-            android:onClick="onClick">
-        </Button>
-        <Button
+            android:onClick="onClick"/>
+        <com.gc.materialdesign.views.ButtonRectangle
             android:id="@+id/signupBtn"
-            android:layout_height="100px"
+            android:layout_height="120px"
             android:layout_width="match_parent"
             android:text="Sign up"
-            android:textStyle="bold"
-            android:textSize="7pt"
-            android:textColor="#3F5991"
-            android:background="#CFE0CE"
+            android:textSize="5pt"
+            android:textColor="@color/text_color_1"
+            android:background="@color/base_color_1"
             android:layout_margin="5dp"
-            android:onClick="onClick">
-        </Button>
+            android:onClick="onClick"/>
+
     </LinearLayout>
 </LinearLayout>

@@ -4,10 +4,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.androidprojects.esprit.ikotlin.fragments.CompeteFragment;
-import com.androidprojects.esprit.ikotlin.fragments.ConnectFragment;
-import com.androidprojects.esprit.ikotlin.fragments.LearnFragment;
-import com.androidprojects.esprit.ikotlin.fragments.ShareFragment;
+import com.androidprojects.esprit.ikotlin.fragments.BadgesFragment;
+import com.androidprojects.esprit.ikotlin.fragments.CodesFragments;
+import com.androidprojects.esprit.ikotlin.fragments.PostsFragment;
+import com.androidprojects.esprit.ikotlin.fragments.SkillsFragment;
 
 /**
  * Created by Amal on 11/11/2017.
@@ -16,7 +16,7 @@ import com.androidprojects.esprit.ikotlin.fragments.ShareFragment;
 public class ProfileTabs_Adapter extends FragmentPagerAdapter {
 
     private int NUM_ITEMS = 4;
-    private String[] titles= new String[]{"Activity", "0\nSkills","0\nBadges","0\nCompetitions"};
+    private String[] titles= new String[]{"2\nCodes", "12\nPosts","3\nSkills","5\nBadges"};
 
     public ProfileTabs_Adapter(FragmentManager fm) {
         super(fm);
@@ -33,13 +33,13 @@ public class ProfileTabs_Adapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new LearnFragment();
+                return new CodesFragments();
             case 1:
-                return new ShareFragment();
+                return new PostsFragment();
             case 2:
-                return new CompeteFragment();
+                return new SkillsFragment();
             case 3:
-                return new ConnectFragment();
+                return new BadgesFragment();
             default:
                 return null;
         }

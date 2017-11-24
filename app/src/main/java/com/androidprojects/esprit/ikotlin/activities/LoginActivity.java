@@ -4,10 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.VolleyError;
@@ -17,6 +15,7 @@ import com.androidprojects.esprit.ikotlin.models.User;
 import com.androidprojects.esprit.ikotlin.utils.Configuration;
 import com.androidprojects.esprit.ikotlin.webservices.ServerCallbacks;
 import com.androidprojects.esprit.ikotlin.webservices.UserProfileServices;
+import com.github.florent37.materialtextfield.MaterialTextField;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -27,8 +26,7 @@ import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
     public static String IP;
-    TextView emailText;
-    TextView passwordText;
+    MaterialTextField emailText, passwordText;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
 
@@ -41,10 +39,8 @@ public class LoginActivity extends AppCompatActivity {
         /*** disabling actionBar ****/
         getSupportActionBar().hide();
 
-        emailText=(TextView) findViewById(R.id.emailText_login);
-        passwordText=(TextView) findViewById(R.id.pswText);
-        progressBar=(ProgressBar) findViewById(R.id.progressBarLogin) ;
-
+        emailText=findViewById(R.id.emailText_login);
+        passwordText= findViewById(R.id.pswText);
 
         //get firebase instance
         auth=FirebaseAuth.getInstance();
@@ -53,16 +49,16 @@ public class LoginActivity extends AppCompatActivity {
 /** ---------- FIREBASE (and mysql) LOGIN --------- **/
 public void login(View view){
 
-    final String userEmail = emailText.getText().toString();
-    final String userPassword=passwordText.getText().toString();
+    final String userEmail = emailText.getEditText().getText().toString();
+    final String userPassword=passwordText.getEditText().getText().toString();
 
     if (userEmail.trim().isEmpty()){
-        emailText.setError("Required");
+        emailText.getEditText().setError("Required");
         return;
     }
 
     if (userPassword.trim().isEmpty()){
-        passwordText.setError("Required");
+        passwordText.getEditText().setError("Required");
         return;
     }
     progressBar.setVisibility(View.VISIBLE);
@@ -75,7 +71,7 @@ public void login(View view){
               progressBar.setVisibility(View.GONE);
               // there was an error
               if (userPassword.length() < 6) {
-                  passwordText.setError("Password length must be over 6 characters");
+                  passwordText.getEditText().setError("Password length must be over 6 characters");
               } else {
                   Toast.makeText(LoginActivity.this, "Invalid entries\nPlease retry..", Toast.LENGTH_LONG).show();
               }

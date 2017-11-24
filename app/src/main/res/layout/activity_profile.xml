@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:background="#f3f3f3"
+        android:background="@color/base_color_1"
         android:orientation="horizontal">
 
         <ImageButton
@@ -22,22 +22,41 @@
             android:layout_alignParentTop="true"
             android:background="@null"
             android:src="@drawable/ic_settings" />
-
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/userImgProfile"
-            android:layout_width="160px"
-            android:layout_height="160px"
+            android:layout_width="200px"
+            android:layout_height="200px"
             android:layout_centerInParent="true"
-            android:scaleType="center"
-            android:adjustViewBounds="true"/>
+            app:civ_border_width="2dp"
+            app:civ_border_color="#60FFB417"/>
 
         <TextView
             android:id="@+id/fullNameInProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
             android:layout_below="@+id/userImgProfile"
+            android:fontFamily="@font/roboto_light"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#545454"
+            android:text="text test"
             android:src="@drawable/ic_profile"/>
+        <ProgressBar
+            android:id="@+id/profileProgress"
+            android:layout_width="180dp"
+            android:layout_height="12dp"
+            android:layout_below="@id/fullNameInProfile"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:backgroundTint="#30000000"
+            android:progressTint="#FFB417"
+            android:scaleY="2"
+            android:progress="20"
+            android:max="100"/>
 
     </RelativeLayout>
 
@@ -45,6 +64,9 @@
         android:id="@+id/profileTabs"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        app:tabTextColor="#545454"
+        app:tabBackground="@drawable/tab_color_selector"
+        app:tabIndicatorColor="#FFB417"
         app:tabMode="fixed"
         app:tabGravity="fill">
     </android.support.design.widget.TabLayout>

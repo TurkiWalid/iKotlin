@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#f3f3f3</color>
+    <color name="colorPrimaryDark">#f0f4f0</color>
     <color name="colorAccent">#FF4081</color>
 
 
@@ -10,7 +10,8 @@
     <color name="default_circle_indicator_page_color">#00000000</color>
     <color name="default_circle_indicator_fill_color">#703F5991</color>
     <color name="default_circle_indicator_stroke_color">#3F5991</color>
-    <color name="tab_background_selected">#CFE0CE</color>
-    <color name="tab_background_unselected">#CFE0CE</color>
+    <color name="base_color_1">#CFE0CE</color>
+    <color name="base_color_2">#FFC717</color>
+    <color name="text_color_1">#3F5991</color>
 
 </resources>

@@ -3,7 +3,15 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#CFE0CE</item>
-        <item name="colorPrimaryDark">#c7c7c7</item>
+        <item name="colorPrimaryDark">#f0f4f0</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="FixedHeightBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/demo_view_height</item>
+        <item name="android:layout_margin">@dimen/demo_view_margin</item>
+    </style>
+
 </resources>

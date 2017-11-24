@@ -5,7 +5,7 @@ android {
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.androidprojects.esprit.ikotlin"
-        minSdkVersion 19
+        minSdkVersion 20
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -27,14 +27,38 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:support-v4:26.+'
-    compile 'com.android.support:design:26.0.+'
+    compile 'com.android.support:design:26.+'
     testCompile 'junit:junit:4.12'
+
+
+    /********** for integrated integrated APIs ( ggle+, lkdin ..) ********/
     // linkedin API
-    compile project(path: ':linkedin-sdk')
+         //compile project(path: ':linkedin-sdk')
+    compile 'com.github.neurospeech:unofficial-linkedin-sdk-android:v1.1.4'
     // to deserialize/serialize json ibjects returned by LINKEDIN API
     compile 'com.google.code.gson:gson:2.8.2'
+
+
+    /********** for uis  ********/
     // to set imageView's src with url for linkedin API
     compile 'com.squareup.picasso:picasso:2.5.2'
+    // for the course ui ( the scrollbar ) -- to review --
+    compile 'com.github.AmalH:Paralloid:0.0.1'
+    // number progress
+    compile 'com.daimajia.numberprogressbar:library:1.4@aar'
+    // material design library
+    compile 'com.github.vajro:MaterialDesignLibrary:1.6'
+    //compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
+    //to use material flat button
+    compile 'com.github.florent37:materialtextfield:1.0.7'
+    // circular imageView
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    // to change selected tab's icon
+
+
+
+    /********** for database **********/
+    compile 'com.github.jrvansuita:IconHandler:+'
     //firebase authentification
     compile "com.google.firebase:firebase-auth:9.0.2"
     //firebase database

@@ -16,9 +16,6 @@ import java.util.Calendar;
 
 public class DataBaseHandler extends SQLiteOpenHelper {
 
-
-    // just a test comment
-
     //Database version
     public static final int DATABASE_VERSION=1;
     //Database name
@@ -90,7 +87,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         values.put(KEY_EMAIL, user.getEmail());
         values.put(KEY_CONFIRMED_ACCOUNT, user.isConfirmed());
         values.put(KEY_LASTLOGGED, user.getLast_loggued().getTimeInMillis());
-        values.put(KEY_PICTURE, user.getPictureUrl());
+        values.put(KEY_PICTURE, user.getPictureURL());
         values.put(KEY_SKILL_LEARNER, user.getSkill_learner());
         values.put(KEY_SKILL_CHALLENGER, user.getSkill_challenger());
         values.put(KEY_SKILL_CODER, user.getSkill_coder());
@@ -109,7 +106,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         values.put(KEY_EMAIL, user.getEmail());
         values.put(KEY_CONFIRMED_ACCOUNT, user.isConfirmed());
         values.put(KEY_LASTLOGGED, user.getLast_loggued().getTimeInMillis());
-        values.put(KEY_PICTURE, user.getPictureUrl());
+        values.put(KEY_PICTURE, user.getPictureURL());
         values.put(KEY_SKILL_LEARNER, user.getSkill_learner());
         values.put(KEY_SKILL_CHALLENGER, user.getSkill_challenger());
         values.put(KEY_SKILL_CODER, user.getSkill_coder());

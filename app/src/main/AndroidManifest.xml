@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.androidprojects.esprit.ikotlin">
+    package="com.androidprojects.esprit.ikotlin"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -25,7 +26,11 @@
         <activity android:name=".activities.EditProfileActivity" />
         <activity android:name=".activities.SettingsActivity" />
         <activity android:name=".activities.ProfileSettingsActivity" />
-        <activity android:name=".Loading_screen"></activity>
     </application>
+
+    <meta-data
+        tools:replace="android:value"
+        android:name="android.support.VERSION"
+        android:value="26.1.0" />
 
 </manifest>

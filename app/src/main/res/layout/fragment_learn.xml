@@ -1,15 +1,32 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.androidprojects.esprit.ikotlin.fragments.LearnFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textStyle="bold"
         android:textSize="16dp"
-        android:text="learn fragment, contains chapters and everything related to them..." />
+        android:textStyle="bold"
+        android:text="No courses"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Start learning now!"
+        />
+    <Button
+        android:id="@+id/openCoursesBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40px"
+        android:background="@color/base_color_2"
+        android:textColor="@color/text_color_1"
+        android:layout_marginTop="20px"
+        android:text="Add courses"/>
 
-</FrameLayout>
+</LinearLayout>
