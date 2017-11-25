@@ -33,7 +33,7 @@ import org.json.JSONObject;
 
 public class SignupActivity extends AppCompatActivity {
 
-    static User user;
+    public static User user;
     private FirebaseAuth auth;
     MaterialTextField usernameTxt, emailTxt, passwordTxt;
     UserProfileServices userprofile;
@@ -142,7 +142,6 @@ public class SignupActivity extends AppCompatActivity {
                 .init(this, buildScope(), new AuthListener() {
                     @Override
                     public void onAuthSuccess() {
-
                         /*Toast.makeText(getApplicationContext(), "success" +
                                         LISessionManager
                                                 .getInstance(getApplicationContext())
@@ -152,7 +151,6 @@ public class SignupActivity extends AppCompatActivity {
 
                     @Override
                     public void onAuthError(LIAuthError error) {
-
                        /* Toast.makeText(getApplicationContext(), "failed "
                                         + error.toString(),
                                 Toast.LENGTH_LONG).show();*/
@@ -167,7 +165,7 @@ public class SignupActivity extends AppCompatActivity {
         apiHelper.getRequest(this, url, new ApiListener() {
             @Override
             public void onApiSuccess(ApiResponse apiResponse) {
-                //Log.d("LOG TEST",apiResponse.getResponseDataAsJson().toString());
+                Log.d("LOG TEST",apiResponse.getResponseDataAsJson().toString());
                 Gson gson = new Gson();
                 user = gson.fromJson(apiResponse.getResponseDataAsJson().toString(),User.class);
                //Log.d("tesssst",user.toString());

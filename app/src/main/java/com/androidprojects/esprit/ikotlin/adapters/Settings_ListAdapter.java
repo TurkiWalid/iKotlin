@@ -10,14 +10,14 @@ import android.widget.TextView;
 import com.androidprojects.esprit.ikotlin.R;
 
 
-public class List1_Adapter extends BaseAdapter{
+public class Settings_ListAdapter extends BaseAdapter{
     private static final int ITEM_VIEW_TYPE_CONTENT = 0;
     private static final int ITEM_VIEW_TYPE_SEPARATOR = 1;
     private static final int ITEM_VIEW_TYPE_COUNT = 2;
     private String[] content;
     private ListActivity adaptTo;
 
-    public List1_Adapter(ListActivity adaptTo, String[]content){
+    public Settings_ListAdapter(ListActivity adaptTo, String[]content){
         this.adaptTo=adaptTo;
         this.content=content;
     }
@@ -58,7 +58,7 @@ public class List1_Adapter extends BaseAdapter{
         // create a ViewHolder to speed up changes if you want ;)
         if (view == null) {
             view = LayoutInflater.from(adaptTo.getBaseContext()).inflate(
-                    type == ITEM_VIEW_TYPE_SEPARATOR ? R.layout.list1_rowseperator : R.layout.list1_row, viewGroup, false);
+                    type == ITEM_VIEW_TYPE_SEPARATOR ? R.layout.settingslist_rowseperator : R.layout.settingslist_item, viewGroup, false);
         }
 
         // We can now fill the list item view with the appropriate data.

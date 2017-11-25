@@ -16,14 +16,14 @@ import com.androidprojects.esprit.ikotlin.fragments.LearnFragment;
 import java.util.HashMap;
 import java.util.List;
 
-public class List2_Adapter extends BaseExpandableListAdapter {
+public class CoursesList_Adapter extends BaseExpandableListAdapter {
 
     private Context context;
     private List listTitles;
     private HashMap<String, List> listData;
     private int[] icons;
 
-    public List2_Adapter (Context context, List listTitles, HashMap<String, List>listData, int[]icons) {
+    public CoursesList_Adapter(Context context, List listTitles, HashMap<String, List>listData, int[]icons) {
         this.context = context;
         this.listTitles = listTitles;
         this.listData= listData;
@@ -46,7 +46,7 @@ public class List2_Adapter extends BaseExpandableListAdapter {
 
         final String childText = (String) getChild(groupPosition, childPosition);
         if (convertView == null)
-            convertView = ((LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.list2_row, null);
+            convertView = ((LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.courseslist_item, null);
         ((TextView) convertView.findViewById(R.id.listItem_text)).setText(childText);
 
         return convertView;

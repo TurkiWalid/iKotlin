@@ -1,11 +1,6 @@
 package com.androidprojects.esprit.ikotlin.webservices;
 
-import android.app.Application;
 import android.content.Context;
-import android.content.Intent;
-import android.support.v4.content.ContextCompat;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -57,7 +52,6 @@ public class UserProfileServices {
         m.put("username", username);
         m.put("email", email);
         final JSONObject jsonBody = new JSONObject(m);
-
         JsonObjectRequest jsObjRequest = new JsonObjectRequest
                 (Request.Method.POST, IP + URL_RGISTER, jsonBody, new Response.Listener<JSONObject>() {
 

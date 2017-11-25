@@ -5,11 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.androidprojects.esprit.ikotlin.R;
-import com.androidprojects.esprit.ikotlin.adapters.List1_Adapter;
+import com.androidprojects.esprit.ikotlin.adapters.Settings_ListAdapter;
 import com.androidprojects.esprit.ikotlin.webservices.UserProfileServices;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -32,7 +30,7 @@ public class SettingsActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setListAdapter(new List1_Adapter(this,settingsContent));
+        setListAdapter(new Settings_ListAdapter(this,settingsContent));
         setContentView(R.layout.activity_settings);
         auth=FirebaseAuth.getInstance();
     }

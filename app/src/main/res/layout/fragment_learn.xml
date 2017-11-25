@@ -27,6 +27,6 @@
         android:background="@color/base_color_2"
         android:textColor="@color/text_color_1"
         android:layout_marginTop="20px"
-        android:text="Add courses"/>
+        android:text="Start a course"/>
 
 </LinearLayout>

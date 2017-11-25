@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 
 import com.androidprojects.esprit.ikotlin.R;
-import com.androidprojects.esprit.ikotlin.adapters.List2_Adapter;
+import com.androidprojects.esprit.ikotlin.adapters.CoursesList_Adapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,7 +36,7 @@ public class LearnFragment extends Fragment {
         //dialog.getWindow().setBackgroundDrawableResource(R.drawable.test);
         this.dialog.setContentView(R.layout.list_courseslist);
         prepareListData();
-        ((ExpandableListView) dialog.findViewById(R.id.expandableLvw)).setAdapter(new List2_Adapter(getContext(), courses, chapters,icons));
+        ((ExpandableListView) dialog.findViewById(R.id.expandableLvw)).setAdapter(new CoursesList_Adapter(getContext(), courses, chapters,icons));
         v.findViewById(R.id.openCoursesBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
