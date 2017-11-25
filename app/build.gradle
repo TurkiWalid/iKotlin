@@ -56,9 +56,9 @@ dependencies {
     /********** for database **********/
     compile 'com.github.jrvansuita:IconHandler:+'
     //firebase authentification
-    compile "com.google.firebase:firebase-auth:9.0.2"
+    compile "com.google.firebase:firebase-auth:9.6.1"
     //firebase database
-    compile 'com.google.firebase:firebase-database:9.0.2'
+    compile 'com.google.firebase:firebase-database:9.6.1'
 
 }
 apply plugin: 'com.google.gms.google-services'
