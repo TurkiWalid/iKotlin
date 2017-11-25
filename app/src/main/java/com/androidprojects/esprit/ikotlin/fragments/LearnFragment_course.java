@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.ScrollView;
 
 import com.androidprojects.esprit.ikotlin.R;
@@ -30,10 +29,16 @@ public class LearnFragment_course extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_learn_course, container, false);
        LinearLayout courseInfoLayout = v.findViewById(R.id.courseInfoLayout);
-       ListView chaptersLv =  v.findViewById(R.id.chaptersLv);
-       ScrollView scrollView = scrollView =  v.findViewById(R.id.scroll_view);
-       chaptersLv.setAdapter(new ChaptersList_Adapter(getContext(),chapters));
-        ((Parallaxor) scrollView).parallaxViewBy(courseInfoLayout, 0.5f);
+
+       ScrollView scrollView =  v.findViewById(R.id.scroll_view);
+       ChaptersList_Adapter adapter = new ChaptersList_Adapter(getContext(),chapters);
+
+       //filling the scrollView
+        for (int i = 0; i < adapter.getCount(); i++) {
+            View item = adapter.getView(i, null, null);
+            ((LinearLayout)v.findViewById(R.id.chaptersHolder)).addView(item);
+        }
+        //parallax effect
         if (scrollView instanceof Parallaxor) {
             ((Parallaxor) scrollView).parallaxViewBy(courseInfoLayout, 0.5f);
         }
