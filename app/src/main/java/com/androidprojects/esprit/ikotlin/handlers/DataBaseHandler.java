@@ -102,22 +102,8 @@ public class DataBaseHandler extends SQLiteOpenHelper {
     }
 
     public void updateUser(User user){
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(KEY_UID, user.getId());
-        values.put(KEY_USERNAME, user.getUsername());
-        values.put(KEY_EMAIL, user.getEmail());
-        values.put(KEY_CONFIRMED_ACCOUNT, user.isConfirmed());
-        values.put(KEY_LASTLOGGED, user.getLast_loggued().getTimeInMillis());
-        values.put(KEY_PICTURE, user.getPictureURL());
-        values.put(KEY_SKILL_LEARNER, user.getSkill_learner());
-        values.put(KEY_SKILL_CHALLENGER, user.getSkill_challenger());
-        values.put(KEY_SKILL_CODER, user.getSkill_coder());
-        values.put(KEY_CREATED, user.getCreated().getTimeInMillis());
-        //UPDATE
-        db.update(TABLE_USER,values,"id = ?", new String[] {String.valueOf(user.getId())});
-        //CLOSE CONNECTION
-        db.close();
+        deleteUser();
+        saveUser(user);
     }
 
     public void deleteUser(){
