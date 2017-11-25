@@ -17,8 +17,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    productFlavors {
-    }
 }
 
 dependencies {
@@ -31,12 +29,14 @@ dependencies {
     compile 'com.android.support:support-v4:26.+'
     compile 'com.android.support:design:26.+'
     testCompile 'junit:junit:4.12'
+
     /********** for integrated integrated APIs ( ggle+, lkdin ..) ********/
     // linkedin API
     //compile project(path: ':linkedin-sdk')
     compile 'com.github.neurospeech:unofficial-linkedin-sdk-android:v1.1.4'
     // to deserialize/serialize json ibjects returned by LINKEDIN API
     compile 'com.google.code.gson:gson:2.8.2'
+
     /********** for uis  ********/
     // to set imageView's src with url for linkedin API
     compile 'com.squareup.picasso:picasso:2.5.2'
@@ -52,11 +52,14 @@ dependencies {
     // circular imageView
     compile 'de.hdodenhof:circleimageview:2.2.0'
     // to change selected tab's icon
+
     /********** for database **********/
     compile 'com.github.jrvansuita:IconHandler:+'
     //firebase authentification
-    compile 'com.google.firebase:firebase-auth:9.0.2'
+    compile "com.google.firebase:firebase-auth:9.0.2"
     //firebase database
     compile 'com.google.firebase:firebase-database:9.0.2'
+
 }
 apply plugin: 'com.google.gms.google-services'
+
