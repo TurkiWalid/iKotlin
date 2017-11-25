@@ -190,22 +190,22 @@
         android:paddingBottom="0dp">
         <com.gc.materialdesign.views.ButtonRectangle
             android:id="@+id/loginBtn"
-            android:layout_height="120px"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:text="Login"
-            android:textSize="5pt"
+            android:textSize="3pt"
             android:textColor="@color/text_color_1"
             android:background="#FFC717"
             android:onClick="onClick"/>
         <com.gc.materialdesign.views.ButtonRectangle
             android:id="@+id/signupBtn"
-            android:layout_height="120px"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:text="Sign up"
-            android:textSize="5pt"
+            android:textSize="3pt"
             android:textColor="@color/text_color_1"
             android:background="@color/base_color_1"
-            android:layout_margin="5dp"
+
             android:onClick="onClick"/>
 
     </LinearLayout>

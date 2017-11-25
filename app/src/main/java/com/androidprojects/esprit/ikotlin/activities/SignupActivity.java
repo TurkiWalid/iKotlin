@@ -109,8 +109,11 @@ public class SignupActivity extends AppCompatActivity {
                                     User user;
                                     user=UserProfileServices.getInstance().get_user_from_json(result);
                                     DataBaseHandler.getInstance(SignupActivity.this).saveUser(user);
+                                    FirebaseAuth.getInstance().getCurrentUser().sendEmailVerification();
                                     Intent intent = new Intent(SignupActivity.this, HomeActivity.class);
                                     startActivity(intent);
+
+                                    finish();
                                 }
 
                                 @Override
@@ -125,7 +128,7 @@ public class SignupActivity extends AppCompatActivity {
                                     Toast.makeText(SignupActivity.this,"Error while registring please retry",Toast.LENGTH_LONG).show();
                                 }
                             });
-                            finish();
+
                         }
                     }
                 });

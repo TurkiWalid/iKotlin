@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.androidprojects.esprit.ikotlin.models.User;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Calendar;
 
@@ -36,6 +37,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
     public static final String KEY_SKILL_CHALLENGER="skill_challenger";
     public static final String KEY_SKILL_CODER="skill_coder";
     public static final String KEY_CONFIRMED_ACCOUNT="confirmed";
+    public static final String KEY_CREATED="created";
 
     public DataBaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -64,7 +66,8 @@ public class DataBaseHandler extends SQLiteOpenHelper {
                 KEY_PICTURE+" TEXT, "+
                 KEY_SKILL_LEARNER+" INTEGER, "+
                 KEY_SKILL_CHALLENGER+" INTEGER, "+
-                KEY_SKILL_CODER+" INTEGER "+
+                KEY_SKILL_CODER+" INTEGER ,"+
+                KEY_CREATED+" INTEGER "+
                 ")";
 
         sqLiteDatabase.execSQL(CREATE_ARTICLE_TABLE);
@@ -91,7 +94,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         values.put(KEY_SKILL_LEARNER, user.getSkill_learner());
         values.put(KEY_SKILL_CHALLENGER, user.getSkill_challenger());
         values.put(KEY_SKILL_CODER, user.getSkill_coder());
-
+        values.put(KEY_CREATED, user.getCreated().getTimeInMillis());
         //INSERT
         db.insert(TABLE_USER,null,values);
         //CLOSE CONNECTION
@@ -110,6 +113,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         values.put(KEY_SKILL_LEARNER, user.getSkill_learner());
         values.put(KEY_SKILL_CHALLENGER, user.getSkill_challenger());
         values.put(KEY_SKILL_CODER, user.getSkill_coder());
+        values.put(KEY_CREATED, user.getCreated().getTimeInMillis());
         //UPDATE
         db.update(TABLE_USER,values,"id = ?", new String[] {String.valueOf(user.getId())});
         //CLOSE CONNECTION
@@ -141,14 +145,19 @@ public class DataBaseHandler extends SQLiteOpenHelper {
             Calendar created= Calendar.getInstance();
             created.setTimeInMillis(cursor.getLong(5));
             Calendar last_log= Calendar.getInstance();
-            last_log.setTimeInMillis(cursor.getLong(6));
+            last_log.setTimeInMillis(cursor.getLong(10));
 
             User user=new User(cursor.getString(1),cursor.getString(2),cursor.getString(3),
-                    cursor.getString(4), created , last_log
-                    ,(cursor.getInt(7) != 0), cursor.getInt(8),cursor.getInt(9),
-                    cursor.getInt(10));
+                    last_log, cursor.getString(6), cursor.getInt(7),cursor.getInt(8),
+                    cursor.getInt(9),(cursor.getInt(4) != 0),created);
             return user;
         }
         return null;
+    }
+
+    public void reset_table_user(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
+        this.onCreate(this.getWritableDatabase());
     }
 }

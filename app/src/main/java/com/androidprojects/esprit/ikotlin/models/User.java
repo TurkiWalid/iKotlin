@@ -16,7 +16,8 @@ public class User {
     public User() {
     }
 
-    public User(String id, String username, String email, String pictureUrl, Calendar created, Calendar last_loggued, boolean confirmed, int skill_learner, int skill_challenger, int skill_coder) {
+    public User(String id, String username, String email, Calendar last_loggued,
+                String pictureUrl, int skill_learner, int skill_challenger, int skill_coder, boolean confirmed,Calendar created) {
         this.id = id;
         this.username = username;
         this.email = email;

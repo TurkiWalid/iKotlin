@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -41,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
 
         emailText=findViewById(R.id.emailText_login);
         passwordText= findViewById(R.id.pswText);
+        progressBar=findViewById(R.id.progressBarSignIn);
 
         //get firebase instance
         auth=FirebaseAuth.getInstance();
@@ -61,7 +63,6 @@ public void login(View view){
         passwordText.getEditText().setError("Required");
         return;
     }
-    progressBar.setVisibility(View.VISIBLE);
     //login via firebase
   auth.signInWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener
           (LoginActivity.this, new OnCompleteListener<AuthResult>() {
@@ -76,18 +77,21 @@ public void login(View view){
                   Toast.makeText(LoginActivity.this, "Invalid entries\nPlease retry..", Toast.LENGTH_LONG).show();
               }
           } else {
-
+              progressBar.setVisibility(View.VISIBLE);
               //try logging via mysql
               String uid=auth.getCurrentUser().getUid();
               UserProfileServices.getInstance().markLoggedUserWebService(uid, LoginActivity.this, new ServerCallbacks() {
                   @Override
                   public void onSuccess(JSONObject result) {
+
                       User user;
                       user=UserProfileServices.getInstance().get_user_from_json(result);
                       DataBaseHandler.getInstance(LoginActivity.this).saveUser(user);
+                      //Log.d("user",user.toString());
                       Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                       intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                       startActivity(intent);
+                      finish();
                   }
 
                   @Override
@@ -100,7 +104,7 @@ public void login(View view){
                       auth.signOut();
                   }
               });
-              finish();
+
           }
       }
   });
