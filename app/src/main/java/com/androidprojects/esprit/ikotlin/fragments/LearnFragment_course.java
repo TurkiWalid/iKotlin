@@ -10,33 +10,42 @@ import android.widget.ScrollView;
 
 import com.androidprojects.esprit.ikotlin.R;
 import com.androidprojects.esprit.ikotlin.adapters.ChaptersList_Adapter;
-import com.androidprojects.esprit.ikotlin.models.Chapter;
 import com.tn.amalhichri.library.Parallaxor;
 
 
 public class LearnFragment_course extends Fragment {
 
+    private int coursePosition;
 
-    // static data to be changed from DB later
-    Chapter[] chapters= new Chapter[]{
-            new Chapter("Chapter 1_ Kotlin for server side","chapter 1 description goes here",2,120,1,null),
-            new Chapter("Chapter 2_ Kotlin for Android","chapter 2 description goes here",2,120,1,null),
-            new Chapter("Chapter 3_ Kotlin for JavaScript","chapter 3 description goes here",2,120,1,null),
-            new Chapter("Chapter 4_ Kotlin / Native","chapter 4 description goes here",2,120,1,null),
-    };
+    public static LearnFragment_course newInstance(int coursePosition) {
+        Bundle args = new Bundle();
+        args.putInt("coursePosition",coursePosition);
+        LearnFragment_course fragment = new LearnFragment_course();
+        fragment.setArguments(args);
+        return fragment;
+    }
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+
+        coursePosition= getArguments().getInt("coursePosition");
+
         View v = inflater.inflate(R.layout.fragment_learn_course, container, false);
        LinearLayout courseInfoLayout = v.findViewById(R.id.courseInfoLayout);
 
        ScrollView scrollView =  v.findViewById(R.id.scroll_view);
-       ChaptersList_Adapter adapter = new ChaptersList_Adapter(getContext(),chapters);
+       ChaptersList_Adapter adapter = new ChaptersList_Adapter(getContext(),coursePosition);
 
        //filling the scrollView
         for (int i = 0; i < adapter.getCount(); i++) {
+            final LearnFragment_chapter goToFragment = LearnFragment_chapter.newInstance(i);
             View item = adapter.getView(i, null, null);
             ((LinearLayout)v.findViewById(R.id.chaptersHolder)).addView(item);
+            item.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    getFragmentManager().beginTransaction().replace(R.id.root_learFragment,goToFragment).addToBackStack(null).commit();
+                }
+            });
         }
         //parallax effect
         if (scrollView instanceof Parallaxor) {

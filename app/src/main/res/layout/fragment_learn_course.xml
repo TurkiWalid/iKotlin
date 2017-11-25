@@ -154,7 +154,6 @@
     </RelativeLayout>
     </LinearLayout>
 
-    <!-- this will be changed into a parallax listView when we'll have dynamic data -->s
     <com.tn.amalhichri.library.views.ParallaxScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
@@ -166,8 +165,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp"
             android:paddingTop="192dp">
-
         </LinearLayout>
     </com.tn.amalhichri.library.views.ParallaxScrollView>
     </FrameLayout>

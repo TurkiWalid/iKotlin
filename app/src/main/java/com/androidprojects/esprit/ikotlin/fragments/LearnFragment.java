@@ -22,11 +22,13 @@ public class LearnFragment extends Fragment {
 
     private List<String> courses;
     private HashMap<String,List> chapters;
+
     private int[] icons = new int[]{R.drawable.ic_overview,R.drawable.ic_start,R.drawable.ic_basics,R.drawable.ic_classesobjects,
             R.drawable.ic_functions,R.drawable.ic_others,R.drawable.ic_java,R.drawable.ic_javascript};
 
     private static Dialog dialog;
     public static FragmentManager fgMgr;
+    public static ExpandableListView lvCourses;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
@@ -36,7 +38,8 @@ public class LearnFragment extends Fragment {
         //dialog.getWindow().setBackgroundDrawableResource(R.drawable.test);
         this.dialog.setContentView(R.layout.list_courseslist);
         prepareListData();
-        ((ExpandableListView) dialog.findViewById(R.id.expandableLvw)).setAdapter(new CoursesList_Adapter(getContext(), courses, chapters,icons));
+        this.lvCourses=dialog.findViewById(R.id.expandableLvw);
+        this.lvCourses.setAdapter(new CoursesList_Adapter(getContext(), courses, chapters,icons));
         v.findViewById(R.id.openCoursesBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -132,6 +135,6 @@ public class LearnFragment extends Fragment {
     }
 
     public static void switchFragments(){
-        fgMgr.beginTransaction().replace(R.id.root_learFragment,new LearnFragment_course()).addToBackStack(null).commit();
+        fgMgr.beginTransaction().replace(R.id.root_learFragment,LearnFragment_course.newInstance(lvCourses.getSelectedItemPosition())).addToBackStack(null).commit();
     }
 }

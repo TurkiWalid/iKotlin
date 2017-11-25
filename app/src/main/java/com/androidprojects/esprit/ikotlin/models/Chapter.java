@@ -6,6 +6,7 @@ package com.androidprojects.esprit.ikotlin.models;
 
 public class Chapter {
 
+    
     private String title;
     private String description;
     private int nbBadges;

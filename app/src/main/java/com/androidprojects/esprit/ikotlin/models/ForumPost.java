@@ -6,9 +6,6 @@ package com.androidprojects.esprit.ikotlin.models;
 
 public class ForumPost {
 
-    // ofc there is other data ...
-
-
     private String postedBy;
     private String postedBy_picUrl;
             // these two attributes will be replaced by userId .. (depends on the dataBase)

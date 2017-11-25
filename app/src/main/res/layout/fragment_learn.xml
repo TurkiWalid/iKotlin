@@ -19,7 +19,7 @@
         android:textSize="16dp"
         android:text="Start learning now!"
         />
-    <Button
+    <com.gc.materialdesign.views.ButtonRectangle
         android:id="@+id/openCoursesBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -27,6 +27,8 @@
         android:background="@color/base_color_2"
         android:textColor="@color/text_color_1"
         android:layout_marginTop="20px"
-        android:text="Start a course"/>
+        android:textSize="4pt"
+        android:text="Start a course">
+    </com.gc.materialdesign.views.ButtonRectangle>
 
 </LinearLayout>

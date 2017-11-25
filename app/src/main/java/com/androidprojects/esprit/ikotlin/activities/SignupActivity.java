@@ -151,7 +151,7 @@ public class SignupActivity extends AppCompatActivity {
 
                     @Override
                     public void onAuthError(LIAuthError error) {
-                       /* Toast.makeText(getApplicationContext(), "failed "
+                      /* Toast.makeText(getApplicationContext(), "failed "
                                         + error.toString(),
                                 Toast.LENGTH_LONG).show();*/
                     }

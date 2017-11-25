@@ -18,5 +18,4 @@ public class RootFragment_learn extends Fragment {
        getFragmentManager().beginTransaction().replace(R.id.root_learFragment,new LearnFragment()).addToBackStack(null).commit();
        return v;
     }
-
 }

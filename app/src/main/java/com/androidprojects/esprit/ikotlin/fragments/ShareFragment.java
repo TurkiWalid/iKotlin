@@ -23,9 +23,9 @@ public class ShareFragment extends Fragment {
     // static data for test
     // to be filled from database
     ForumPost[] posts =new ForumPost[]{
-            new ForumPost("Amal Hichri", SignupActivity.user.getPictureURL(),"How to build android app in 1 month",3,7,100),
+             new ForumPost("Amal Hichri", SignupActivity.user.getPictureURL(),"How to build android app in 1 month",3,7,100),
             new ForumPost("Walid Turki",SignupActivity.user.getPictureURL(),"A9ra mobile !! :D",7,3,200),
-            new ForumPost("Test user",SignupActivity.user.getPictureURL(),"Behi w mba3ed ??",6,1,800)
+             new ForumPost("Test user", SignupActivity.user.getPictureURL(),"Behi w mba3ed ??",6,1,800)
     };
 
 

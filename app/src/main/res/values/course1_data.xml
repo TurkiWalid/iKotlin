@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- CHAPTER 1 -->
+    <string name="course1chapter1Content">
+        Using Kotlin for Server-side Development
+        Kotlin is a great fit for developing server-side applications, allowing to write concise and expressive code while maintaining full compatibility with existing Java-based technology stacks and a smooth learning curve:
+Expressiveness: Kotlin s innovative language features, such as its support for type-safe builders and delegated properties, help build powerful and easy-to-use abstractions.
+Scalability: Kotlin\'s support for coroutines helps build server-side applications that scale to massive numbers of clients with modest hardware requirements.
+Interoperability: Kotlin is fully compatible with all Java-based frameworks, which lets you stay on your familiar technology stack while reaping the benefits of a more modern language.
+Migration: Kotlin supports gradual, step by step migration of large codebases from Java to Kotlin. You can start writing new code in Kotlin while keeping older parts of your system in Java.
+Tooling: In addition to great IDE support in general, Kotlin offers framework-specific tooling (for example, for Spring) in the plugin for IntelliJ IDEA Ultimate.
+Learning Curve: For a Java developer, getting started with Kotlin is very easy. The automated Java to Kotlin converter included in the Kotlin plugin helps with the first steps. Kotlin Koans offer a guide through the key features of the language with a series of interactive exercises.
+Frameworks for Server-side Development with Kotlin
+
+Spring makes use of Kotlin\'s language features to offer more concise APIs, starting with version 5.0. The online project generator allows to quickly generate a new project in Kotlin.
+
+Vert.x, a framework for building reactive Web applications on the JVM, offers dedicated support for Kotlin, including full documentation.
+
+Ktor is a Kotlin-native Web framework built by JetBrains, making use of coroutines for high scalability and offering an easy-to-use and idiomatic API.
+
+kotlinx.html is a DSL that can be used to build HTML in a Web application. It serves as an alternative to traditional templating systems such as JSP and FreeMarker.
+
+The available options for persistence include direct JDBC access, JPA, as well as using NoSQL databases through their Java drivers. For JPA, the kotlin-jpa compiler plugin adapts Kotlin-compiled classes to the requirements of the framework.
+
+Deploying Kotlin Server-side Applications
+
+Kotlin applications can be deployed into any host that supports Java Web applications, including Amazon Web Services, Google Cloud Platform and more.
+
+To deploy Kotlin applications on Heroku, you can follow the official Heroku tutorial.
+
+AWS Labs provides a sample project showing the use of Kotlin for writing AWS Lambda functions.
+
+Users of Kotlin on the Server Side
+
+Corda is an open-source distributed ledger platform, supported by major banks, and built entirely in Kotlin.
+
+JetBrains Account, the system responsible for the entire license sales and validation process at JetBrains, is written in 100% Kotlin and has been running in production since 2015 with no major issues.
+
+Next Steps
+
+The Creating Web Applications with Http Servlets and Creating a RESTful Web Service with Spring Boot tutorials show you how you can build and run very small Web applications in Kotlin.
+For a more in-depth introduction to the language, check out the reference documentation on this site and Kotlin Koans.
+    </string>
+
+
+    <!-- CHAPTER 2 -->
+    <string name="course1chapter2Content">
+        Using Kotlin for Android Development
+
+Kotlin is a great fit for developing Android applications, bringing all of the advantages of a modern language to the Android platform without introducing any new restrictions:
+
+Compatibility: Kotlin is fully compatible with JDK 6, ensuring that Kotlin applications can run on older Android devices with no issues. The Kotlin tooling is fully supported in Android Studio and compatible with the Android build system.
+Performance: A Kotlin application runs as fast as an equivalent Java one, thanks to very similar bytecode structure. With Kotlin's support for inline functions, code using lambdas often runs even faster than the same code written in Java.
+Interoperability: Kotlin is 100% interoperable with Java, allowing to use all existing Android libraries in a Kotlin application. This includes annotation processing, so databinding and Dagger work too.
+Footprint: Kotlin has a very compact runtime library, which can be further reduced through the use of ProGuard. In a real application, the Kotlin runtime adds only a few hundred methods and less than 100K to the size of the .apk file.
+Compilation Time: Kotlin supports efficient incremental compilation, so while there's some additional overhead for clean builds, incremental builds are usually as fast or faster than with Java.
+Learning Curve: For a Java developer, getting started with Kotlin is very easy. The automated Java to Kotlin converter included in the Kotlin plugin helps with the first steps. Kotlin Koans offer a guide through the key features of the language with a series of interactive exercises.
+Kotlin for Android Case Studies
+
+Kotlin has been successfully adopted by major companies, and a few of them have shared their experiences:
+
+Pinterest has successfully introduced Kotlin into their application, used by 150M people every month.
+Basecamp\'s Android app is 100% Kotlin code, and they report a huge difference in programmer happiness and great improvements in work quality and speed.
+Keepsafe\'s App Lock app has also been converted to 100% Kotlin, leading to a 30% decrease in source line count and 10% decrease in method count.
+Tools for Android Development
+
+The Kotlin team offers a set of tools for Android development that goes beyond the standard language features:
+
+Kotlin Android Extensions is a compiler extension that allows you to get rid of findViewById() calls in your code and to replace them with synthetic compiler-generated properties.
+Anko is a library providing a set of Kotlin-friendly wrappers around the Android APIs, as well as a DSL that lets your replace your layout .xml files with Kotlin code.
+Next Steps
+
+Download an install Android Studio 3.0, which includes Kotlin support out of the box.
+Follow the Getting Started with Android and Kotlin tutorial to create your first Kotlin application.
+For a more in-depth introduction, check out the reference documentation on this site and Kotlin Koans.
+Another great resource is Kotlin for Android Developers, a book that guides you step by step through the process of creating a real Android application in Kotlin.
+Check out Google\'s sample projects written in Kotlin
+
+    </string>
+
+
+    <!-- CHAPTER 3 -->
+    <string name="course1chapter3Content">
+        Kotlin JavaScript Overview
+    Kotlin provides the ability to target JavaScript. It does so by transpiling Kotlin to JavaScript. The current implementation targets ECMAScript 5.1 but there are plans to eventually target ECMAScript 2015 also.
+
+When you choose the JavaScript target, any Kotlin code that is part of the project as well as the standard library that ships with Kotlin is transpiled to JavaScript. However, this excludes the JDK and any JVM or Java framework or library used. Any file that is not Kotlin will be ignored during compilation.
+
+The Kotlin compiler tries to comply with the following goals:
+
+Provide output that is optimal in size
+Provide output that is readable JavaScript
+Provide interoperability with existing module systems
+Provide the same functionality in the standard library whether targeting JavaScript or the JVM (to the largest possible degree).
+How can it be used
+
+You may want to compile Kotlin to JavaScript in the following scenarios:
+
+Creating Kotlin code that targets client-side JavaScript
+
+Interacting with DOM elements. Kotlin provides a series of statically typed interfaces to interact with the Document Object Model, allowing creation and update of DOM elements.
+
+Interacting with graphics such as WebGL. You can use Kotlin to create graphical elements on a web page using WebGL.
+
+Creating Kotlin code that targets server-side JavaScript
+
+Working with server-side technology. You can use Kotlin to interact with server-side JavaScript such as node.js
+Kotlin can be used together with existing third-party libraries and frameworks, such as JQuery or ReactJS. To access third-party frameworks with a strongly-typed API, you can convert TypeScript definitions from the Definitely Typed type definitions repository to Kotlin using the ts2kt tool. Alternatively, you can use the dynamic type to access any framework without strong typing.
+
+Kotlin is also compatible with CommonJS, AMD and UMD, making interaction with different module systems straightforward.
+
+Getting Started with Kotlin to JavaScript
+
+To find out how to start using Kotlin for JavaScript, please refer to the tutorials.</string>
+
+    <!-- CHAPTER 4 -->
+    <string name="course1chapter4Content">
+        Kotlin/Native
+        Kotlin/Native is a technology for compiling Kotlin to native binaries that run without any VM. It comprises a
+        LLVM-based backend for the Kotlin compiler and a native implementation of the Kotlin runtime library. Kotlin/Native is primarily designed to allow compilation for platforms where virtual machines are not desirable or possible (such as iOS, embedded targets), or where a developer needs to produce a reasonably-sized self-contained program that does not require an additional runtime.
+
+Kotlin/Native fully supports interoperability with native code. For platform libraries, the corresponding interop libraries are available out of the box. For other libraries, we provide a tool to generate an interop library from a C header file, with full support for all C language features. On macOS and iOS, interoperability with Objective/C code is also supported.
+
+Kotlin/Native is currently in development; preview releases are available for you to try. IDE support for Kotlin/Native is available as plugins for CLion.
+
+Target Platforms
+
+Kotlin/Native currently supports the following platforms:
+
+Windows (x86_64 only at the moment)
+Linux (x86_64, arm32, MIPS, MIPS little endian)
+MacOS (x86_64)
+iOS (arm64 only)
+Android (arm32 and arm64)
+WebAssembly (wasm32 only)
+Sample Projects
+
+We\'ve built a number of sample projects to showcase the possibilities of Kotlin/Native:
+
+The Kotlin/Native GitHub repository contains a number of sample projects;
+The KotlinConf Spinner app is a simple cross-platform mobile multiplayer game fully built in Kotlin/Native, consisting of the following components:
+a backend, using SQLite for data storage and exposing a REST/JSON API;
+mobile clients for iOS and Android, using OpenGL;
+a WebAssembly-based browser frontend for viewing the game scores.
+The KotlinConf app is an iOS app with a UIKit-based UI, showcasing the Objective/C interop facilities of Kotlin/Native.
+    </string>
+</resources>
