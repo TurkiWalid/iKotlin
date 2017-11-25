@@ -5,7 +5,7 @@ android {
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.androidprojects.esprit.ikotlin"
-        minSdkVersion 19
+        minSdkVersion 20
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -41,8 +41,7 @@ dependencies {
     // to set imageView's src with url for linkedin API
     compile 'com.squareup.picasso:picasso:2.5.2'
     // for the course ui ( the scrollbar ) -- to review --
-    compile project(path: ':paralloid')
-    //compile 'com.github.AmalH:Paralloid:0.0.1'
+    compile 'com.github.AmalLibs:Paralloid:1.0.0'
     // number progress
     compile 'com.daimajia.numberprogressbar:library:1.4@aar'
     // material design library
@@ -56,9 +55,8 @@ dependencies {
     /********** for database **********/
     compile 'com.github.jrvansuita:IconHandler:+'
     //firebase authentification
-    compile 'com.google.firebase:firebase-auth:9.6.1'
+    compile 'com.google.firebase:firebase-auth:9.0.2'
     //firebase database
-    compile 'com.google.firebase:firebase-database:9.6.1'
+    compile 'com.google.firebase:firebase-database:9.0.2'
 }
 apply plugin: 'com.google.gms.google-services'
-

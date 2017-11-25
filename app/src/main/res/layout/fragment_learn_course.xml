@@ -9,554 +9,166 @@
         android:layout_height="197dp"
         android:padding="7dp"
         android:orientation="vertical">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#10000000"
-        >
-        <ImageView
-            android:id="@+id/courseIcon"
-            android:layout_width="150px"
-            android:layout_height="150px"
-            android:layout_marginTop="25px"
-            android:layout_marginLeft="25px"
-            android:src="@drawable/ic_overview"/>
-        <TextView
-            android:id="@+id/listTitle_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/courseIcon"
-            android:layout_marginTop="30px"
-            android:layout_marginLeft="25px"
-            android:src="@drawable/ic_overview"
-            android:text="Course 1: Overview"
-            android:textStyle="bold"
-            android:textSize="18dip"/>
-        <com.daimajia.numberprogressbar.NumberProgressBar
-            android:id="@+id/courseProgress"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingRight="15dp"
-            android:layout_marginLeft="25px"
-            android:layout_marginTop="10px"
-            android:layout_toEndOf="@id/courseIcon"
-            android:layout_below="@id/listTitle_text"
-            app:progress_reached_color="#7DA7C8"
-            app:progress_text_color="#7DA7C8"
-            app:progress_current="20"
-            app:progress_max="100"
-            app:progress_reached_bar_height="3dp"
-            app:progress_unreached_bar_height="3dp"/>
-        <TextView
-            android:id="@+id/courseDescription"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/courseProgress"
-            android:layout_toEndOf="@id/courseIcon"
-            android:layout_marginLeft="25px"
-            android:paddingTop="20px"
-            android:text="This course contains 4 chapters. Introducing the 4 major applications of Kotlin language."
-            android:textStyle="italic"
-            android:textSize="14dp"
-            android:singleLine="false"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingBottom="10dp"
-            android:layout_alignParentBottom="true">
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_weight="33.5"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/nbChaptersFinished"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="5dp"
-                    android:textSize="18dp"
-                    android:text="3"
-                    android:textStyle="bold"/>
-                <ImageView
+            android:layout_height="match_parent"
+            android:background="#10000000"
+            >
+            <ImageView
+                android:id="@+id/courseIcon"
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:layout_marginTop="25px"
+                android:layout_marginLeft="25px"
+                android:src="@drawable/ic_overview"/>
+            <TextView
+                android:id="@+id/listTitle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/courseIcon"
+                android:layout_marginTop="30px"
+                android:layout_marginLeft="25px"
+                android:src="@drawable/ic_overview"
+                android:text="Course 1: Overview"
+                android:textStyle="bold"
+                android:textSize="18dip"/>
+            <com.daimajia.numberprogressbar.NumberProgressBar
+                android:id="@+id/courseProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:layout_marginLeft="25px"
+                android:layout_marginTop="10px"
+                android:layout_toEndOf="@id/courseIcon"
+                android:layout_below="@id/listTitle_text"
+                app:progress_reached_color="#7DA7C8"
+                app:progress_text_color="#7DA7C8"
+                app:progress_current="20"
+                app:progress_max="100"
+                app:progress_reached_bar_height="3dp"
+                app:progress_unreached_bar_height="3dp"/>
+            <TextView
+                android:id="@+id/courseDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/courseProgress"
+                android:layout_toEndOf="@id/courseIcon"
+                android:layout_marginLeft="25px"
+                android:paddingTop="20px"
+                android:text="This course contains 4 chapters. Introducing the 4 major applications of Kotlin language."
+                android:textStyle="italic"
+                android:textSize="14dp"
+                android:singleLine="false"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:layout_alignParentBottom="true">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="33.5"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/nbChaptersFinished"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18dp"
+                        android:text="3"
+                        android:textStyle="bold"/>
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_courses_finished"
-                    android:layout_toRightOf="@id/nbChaptersFinished"/>
+                        android:layout_toRightOf="@id/nbChaptersFinished"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/nbChaptersFinished"
-                    android:text="completed chapters"
-                    android:textStyle="bold|italic"
-                    android:textSize="11dp" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_weight="33"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/nbbadgesEarned_course"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="5dp"
-                    android:textSize="18dp"
-                    android:text="1"
-                    android:textStyle="bold"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_badges_earned"
-                    android:layout_toRightOf="@id/nbbadgesEarned_course"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nbChaptersFinished"
+                        android:text="completed chapters"
+                        android:textStyle="bold|italic"
+                        android:textSize="11dp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="33"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/nbbadgesEarned_course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18dp"
+                        android:text="1"
+                        android:textStyle="bold"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_badges_earned"
+                        android:layout_toRightOf="@id/nbbadgesEarned_course"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/nbbadgesEarned_course"
-                    android:text="badges earned"
-                    android:layout_centerHorizontal="true"
-                    android:textStyle="bold|italic"
-                    android:textSize="11dp" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_weight="33.5"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/timeNeeded_course"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="5dp"
-                    android:textSize="18dp"
-                    android:text="120 "
-                    android:textStyle="bold"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_timer"
-                    android:layout_toRightOf="@id/timeNeeded_course"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nbbadgesEarned_course"
+                        android:text="badges earned"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold|italic"
+                        android:textSize="11dp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="33.5"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/timeNeeded_course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18dp"
+                        android:text="120 "
+                        android:textStyle="bold"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_timer"
+                        android:layout_toRightOf="@id/timeNeeded_course"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/timeNeeded_course"
-                    android:layout_marginLeft="40dp"
-                    android:text="minutes"
-                    android:textStyle="bold|italic"
-                    android:textSize="11dp" />
-            </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/timeNeeded_course"
+                        android:layout_marginLeft="40dp"
+                        android:text="minutes"
+                        android:textStyle="bold|italic"
+                        android:textSize="11dp" />
+                </RelativeLayout>
 
-        </LinearLayout>
-    </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
-    <!-- this will be changed into a parallax listView when we'll have dynamic data -->s
-    <com.androidprojects.esprit.pralloid.views.ParallaxScrollView
+    <com.tn.amalhichri.library.views.ParallaxScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
 
         <LinearLayout
+            android:id="@+id/chaptersHolder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp"
             android:paddingTop="192dp">
-
-            <!-- chapter 1 -->
-            <RelativeLayout
-                android:background="#3F5991"
-                style="@style/FixedHeightBox">
-                <TextView
-                    android:id="@+id/chapterTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="60px"
-                    android:text="Chapter1 _ Kotlin for server side"
-                    android:textStyle="bold|italic"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="18dp"/>
-                <TextView
-                    android:id="@+id/chapterDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="chapter 1 description goes here"
-                    android:textStyle="italic"
-                    android:layout_below="@id/chapterTitle"
-                    android:layout_centerHorizontal="true"/>
-                <LinearLayout
-                    android:id="@+id/chapterInfoLayout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="7dp"
-                    android:layout_below="@id/chapterDescription"
-                    android:orientation="horizontal">
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:id="@+id/nbbadgesEarned_chapter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:text="1"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/nbbadgesEarned_chapter"
-                            android:src="@drawable/ic_badges_earned" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/nbbadgesEarned_chapter"
-                            android:layout_centerHorizontal="true"
-                            android:text="badges earned"
-                            android:textSize="11dp"
-                            android:textStyle="bold|italic" />
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="30dp">
-                        <TextView
-                            android:id="@+id/timeNeeded_chapter"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:text="120 "
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/timeNeeded_chapter"
-                            android:src="@drawable/ic_timer" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/timeNeeded_chapter"
-                            android:gravity="center_horizontal"
-                            android:layout_marginLeft="40dp"
-                            android:text="minutes"
-                            android:textSize="11dp"
-                            android:textStyle="bold|italic"  />
-                    </RelativeLayout>
-                </LinearLayout>
-                <com.gc.materialdesign.views.ButtonRectangle
-                    android:id="@+id/justTakeQuizzBtn"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:background="#CFE0CE"
-                    android:text="Skip for Quizz"
-                    android:textColor="@color/base_color_1"
-                    android:textSize="6dp"/>
-            </RelativeLayout>
-            <!-- chapter 2 -->
-            <RelativeLayout
-                android:background="#40E5797D"
-                style="@style/FixedHeightBox">
-                <TextView
-                    android:id="@+id/chapterTitle2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="60px"
-                    android:text="Chapter2 _ Kotlin for Android"
-                    android:textStyle="bold|italic"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="18dp"/>
-                <TextView
-                    android:id="@+id/chapterDescription2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="chapter 1 description goes here"
-                    android:textStyle="italic"
-                    android:layout_below="@id/chapterTitle2"
-                    android:layout_centerHorizontal="true"/>
-                <LinearLayout
-                    android:id="@+id/chapterInfoLayout2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="7dp"
-                    android:layout_below="@id/chapterDescription2"
-                    android:orientation="horizontal">
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:id="@+id/nbbadgesEarned_chapter2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:text="1"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/nbbadgesEarned_chapter2"
-                            android:src="@drawable/ic_badges_earned" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/nbbadgesEarned_chapter2"
-                            android:layout_centerHorizontal="true"
-                            android:text="badges earned"
-                            android:textSize="11dp"
-                            android:textStyle="bold|italic"  />
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="30dp">
-                        <TextView
-                            android:id="@+id/timeNeeded_chapter2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:text="120 "
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/timeNeeded_chapter2"
-                            android:src="@drawable/ic_timer" />
-                        android:src="@drawable/ic_timer" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/timeNeeded_chapter2"
-                            android:gravity="center_horizontal"
-                            android:layout_marginLeft="40dp"
-                            android:text="minutes"
-                            android:textSize="11dp"
-                            android:textStyle="bold|italic" />
-                    </RelativeLayout>
-                </LinearLayout>
-                <com.gc.materialdesign.views.ButtonRectangle
-                    android:id="@+id/justTakeQuizzBtn2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="100px"
-                    android:padding="10dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:background="#CFE0CE"
-                    android:text="Skip for Quizz"
-                    android:textColor="@color/base_color_1"
-                    android:textSize="6dp"/>
-            </RelativeLayout>
-            <!-- chapter 3 -->
-            <RelativeLayout
-                android:background="#60a4c639"
-                style="@style/FixedHeightBox">
-                <TextView
-                    android:id="@+id/chapterTitle3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="60px"
-                    android:text="Chapter3 _ Kotlin for Javascript"
-                    android:textStyle="bold|italic"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="18dp"/>
-                <TextView
-                    android:id="@+id/chapterDescription3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="chapter 3 description goes here"
-                    android:textStyle="italic"
-                    android:layout_below="@id/chapterTitle3"
-                    android:layout_centerHorizontal="true"/>
-                <LinearLayout
-                    android:id="@+id/chapterInfoLayout3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="7dp"
-                    android:layout_below="@id/chapterDescription3"
-                    android:orientation="horizontal">
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:id="@+id/nbbadgesEarned_chapter3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:text="1"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/nbbadgesEarned_chapter3"
-                            android:src="@drawable/ic_badges_earned" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/nbbadgesEarned_chapter3"
-                            android:layout_centerHorizontal="true"
-                            android:text="badges earned"
-                            android:textSize="13dp"
-                            android:textStyle="italic" />
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="30dp">
-                        <TextView
-                            android:id="@+id/timeNeeded_chapter3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:text="120 "
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/timeNeeded_chapter3"
-                            android:src="@drawable/ic_timer" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/timeNeeded_chapter3"
-                            android:gravity="center_horizontal"
-                            android:layout_marginLeft="40dp"
-                            android:text="minutes"
-                            android:textSize="13dp"
-                            android:textStyle="italic" />
-                    </RelativeLayout>
-                </LinearLayout>
-                <com.gc.materialdesign.views.ButtonRectangle
-                    android:id="@+id/justTakeQuizzBtn3"
-                    android:layout_width="fill_parent"
-                    android:layout_height="100px"
-                    android:padding="10dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:background="#CFE0CE"
-                    android:text="Skip for Quizz"
-                    android:textColor="@color/base_color_1"
-                    android:textSize="6dp"/>
-            </RelativeLayout>
-            <!-- chapter 4 -->
-            <RelativeLayout
-                android:background="#60FFC717"
-                style="@style/FixedHeightBox">
-                <TextView
-                    android:id="@+id/chapterTitle4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="60px"
-                    android:text="Chapter4 _ Kotlin/Native"
-                    android:textStyle="bold|italic"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="18dp"/>
-                <TextView
-                    android:id="@+id/chapterDescription4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="chapter 4 description goes here"
-                    android:textStyle="italic"
-                    android:layout_below="@id/chapterTitle4"
-                    android:layout_centerHorizontal="true"/>
-                <LinearLayout
-                    android:id="@+id/chapterInfoLayout4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="7dp"
-                    android:layout_below="@id/chapterDescription4"
-                    android:orientation="horizontal">
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:id="@+id/nbbadgesEarned_chapter4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:text="1"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/nbbadgesEarned_chapter4"
-                            android:src="@drawable/ic_badges_earned" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/nbbadgesEarned_chapter4"
-                            android:layout_centerHorizontal="true"
-                            android:text="badges earned"
-                            android:textSize="13dp"
-                            android:textStyle="italic" />
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="30dp">
-                        <TextView
-                            android:id="@+id/timeNeeded_chapter4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="5dp"
-                            android:text="120 "
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/timeNeeded_chapter4"
-                            android:src="@drawable/ic_timer" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/timeNeeded_chapter4"
-                            android:gravity="center_horizontal"
-                            android:layout_marginLeft="40dp"
-                            android:text="minutes"
-                            android:textSize="13dp"
-                            android:textStyle="italic" />
-                    </RelativeLayout>
-                </LinearLayout>
-                <com.gc.materialdesign.views.ButtonRectangle
-                    android:id="@+id/justTakeQuizzBtn4"
-                    android:layout_width="fill_parent"
-                    android:layout_height="100px"
-                    android:padding="10dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:background="#CFE0CE"
-                    android:text="Skip for Quizz"
-                    android:textColor="@color/base_color_1"
-                    android:textSize="6dp"/>
-            </RelativeLayout>
         </LinearLayout>
-    </com.androidprojects.esprit.pralloid.views.ParallaxScrollView>
-    </FrameLayout>
+    </com.tn.amalhichri.library.views.ParallaxScrollView>
+</FrameLayout>
 

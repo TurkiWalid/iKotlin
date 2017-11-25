@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Amal\Documents\AndroidProjects\iKotlin\iKotlin\app\app.iml" filepath="C:\Users\Amal\Documents\AndroidProjects\iKotlin\iKotlin\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/iKotlin.iml" filepath="$PROJECT_DIR$/iKotlin.iml" />
-      <module fileurl="file://C:\Users\Amal\Documents\AndroidProjects\iKotlin\iKotlin\iKotlin.iml" filepath="C:\Users\Amal\Documents\AndroidProjects\iKotlin\iKotlin\iKotlin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/paralloid/paralloid.iml" filepath="$PROJECT_DIR$/paralloid/paralloid.iml" />
     </modules>
   </component>
 </project>

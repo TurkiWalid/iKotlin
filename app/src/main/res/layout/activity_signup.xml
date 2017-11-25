@@ -90,8 +90,8 @@
 
         <com.gc.materialdesign.views.ButtonRectangle
             android:id="@+id/confirmSignup_btn"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_width="match_parent"
             android:layout_marginTop="45px"
             android:background="#FFC717"
             android:text="Sign up"
@@ -101,15 +101,16 @@
 
     </LinearLayout>
 
-    <com.gc.materialdesign.views.ButtonRectangle
-        android:id="@+id/facebookLoginBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#3B5998"
-        android:drawableLeft="@drawable/facebook_loginbtn"
-        android:paddingLeft="10dp"
-        android:text="Sign up with Facebook"
-        android:textColor="#FFFFFF" />
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/facebookLoginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#3B5998"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/facebook_loginbtn"
+            android:paddingLeft="10dp"
+            android:text="Sign up with Facebook"/>
 
         <com.gc.materialdesign.views.ButtonRectangle
             android:id="@+id/linkedinLoginBtn"
