@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -63,51 +62,58 @@ public void login(View view){
         passwordText.getEditText().setError("Required");
         return;
     }
-    //login via firebase
-  auth.signInWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener
-          (LoginActivity.this, new OnCompleteListener<AuthResult>() {
-      @Override
-      public void onComplete(@NonNull Task<AuthResult> task) {
-          if (!task.isSuccessful()) {
-              progressBar.setVisibility(View.GONE);
-              // there was an error
-              if (userPassword.length() < 6) {
-                  passwordText.getEditText().setError("Password length must be over 6 characters");
-              } else {
-                  Toast.makeText(LoginActivity.this, "Invalid entries\nPlease retry..", Toast.LENGTH_LONG).show();
-              }
-          } else {
-              progressBar.setVisibility(View.VISIBLE);
-              //try logging via mysql
-              String uid=auth.getCurrentUser().getUid();
-              UserProfileServices.getInstance().markLoggedUserWebService(uid, LoginActivity.this, new ServerCallbacks() {
-                  @Override
-                  public void onSuccess(JSONObject result) {
 
-                      User user;
-                      user=UserProfileServices.getInstance().get_user_from_json(result);
-                      DataBaseHandler.getInstance(LoginActivity.this).saveUser(user);
-                      //Log.d("user",user.toString());
-                      Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                      intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                      startActivity(intent);
-                      finish();
-                  }
+    /***check internet connection***/
+    if(Configuration.isOnline(getApplicationContext())){
 
+                //login via firebase
+              auth.signInWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener
+                      (LoginActivity.this, new OnCompleteListener<AuthResult>() {
                   @Override
-                  public void onError(VolleyError result) {
-                    auth.signOut();
-                  }
+                  public void onComplete(@NonNull Task<AuthResult> task) {
+                      if (!task.isSuccessful()) {
+                          progressBar.setVisibility(View.GONE);
+                          // there was an error
+                          if (userPassword.length() < 6) {
+                              passwordText.getEditText().setError("Password length must be over 6 characters");
+                          } else {
+                              Toast.makeText(LoginActivity.this, "wrong entries.", Toast.LENGTH_LONG).show();
+                          }
+                      } else {
+                          progressBar.setVisibility(View.VISIBLE);
+                          //try logging via mysql
+                          String uid=auth.getCurrentUser().getUid();
+                          UserProfileServices.getInstance().markLoggedUserWebService(uid, LoginActivity.this, new ServerCallbacks() {
+                              @Override
+                              public void onSuccess(JSONObject result) {
 
-                  @Override
-                  public void onWrong(JSONObject result) {
-                      auth.signOut();
+                                  User user;
+                                  user=UserProfileServices.getInstance().get_user_from_json(result);
+                                  DataBaseHandler.getInstance(LoginActivity.this).saveUser(user);
+                                  //Log.d("user",user.toString());
+                                  Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                  intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                  startActivity(intent);
+                                  finish();
+                              }
+
+                              @Override
+                              public void onError(VolleyError result) {
+                                auth.signOut();
+                              }
+
+                              @Override
+                              public void onWrong(JSONObject result) {
+                                  auth.signOut();
+                              }
+                          });
+
+                      }
                   }
               });
-
-          }
-      }
-  });
+    }
+    else
+        Toast.makeText(LoginActivity.this, "No internet connection.", Toast.LENGTH_LONG).show();
 }
 
 /** ---------- LINKEDIN LOGIN --------- **/

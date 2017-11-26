@@ -13,6 +13,7 @@ import com.androidprojects.esprit.ikotlin.R;
 import com.androidprojects.esprit.ikotlin.handlers.DataBaseHandler;
 import com.androidprojects.esprit.ikotlin.models.User;
 import com.androidprojects.esprit.ikotlin.utils.CirclePageIndicator;
+import com.androidprojects.esprit.ikotlin.utils.Configuration;
 import com.androidprojects.esprit.ikotlin.utils.CustomGestureListener;
 import com.androidprojects.esprit.ikotlin.webservices.ServerCallbacks;
 import com.androidprojects.esprit.ikotlin.webservices.UserProfileServices;
@@ -43,36 +44,45 @@ public class MainActivity extends Activity implements GestureDetector.OnDoubleTa
         /** check if user is connected **/
         auth=FirebaseAuth.getInstance();
             if(auth.getCurrentUser()!=null){
+
+
+                if(Configuration.isOnline(getApplicationContext())){
+                    //reload user
+                    auth.getCurrentUser().reload();
+                    String uid=auth.getCurrentUser().getUid();
+                    UserProfileServices.getInstance().markLoggedUserWebService(uid, this, new ServerCallbacks() {
+                        @Override
+                        public void onSuccess(JSONObject result) {
+
+                            User user;
+                            user=UserProfileServices.getInstance().get_user_from_json(result);
+                            DataBaseHandler.getInstance(MainActivity.this).updateUser(user);
+                            //Log.d("user",user.toString());
+                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent);
+                            finish();
+                        }
+
+                        @Override
+                        public void onError(VolleyError result) {
+                            auth.signOut();
+                        }
+
+                        @Override
+                        public void onWrong(JSONObject result) {
+                            auth.signOut();
+                        }
+                    });
+                }
+                else {
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                    finish();
+                }
                 //clear backstack
                 finishAffinity();
-                //reload user
-                auth.getCurrentUser().reload();
-                String uid=auth.getCurrentUser().getUid();
-                UserProfileServices.getInstance().markLoggedUserWebService(uid, this, new ServerCallbacks() {
-                    @Override
-                    public void onSuccess(JSONObject result) {
-
-                        User user;
-                        user=UserProfileServices.getInstance().get_user_from_json(result);
-                        DataBaseHandler.getInstance(MainActivity.this).updateUser(user);
-                        //Log.d("user",user.toString());
-                        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
-                        finish();
-                    }
-
-                    @Override
-                    public void onError(VolleyError result) {
-                        auth.signOut();
-                    }
-
-                    @Override
-                    public void onWrong(JSONObject result) {
-                        auth.signOut();
-                    }
-                });
-
             }
                 //Log.d("user",user.toString());
 
@@ -118,6 +128,7 @@ public class MainActivity extends Activity implements GestureDetector.OnDoubleTa
             case (R.id.signupBtn):
                 startActivity(new Intent(getApplicationContext(),SignupActivity.class));
         }
+
     }
 
 

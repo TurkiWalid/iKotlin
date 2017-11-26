@@ -56,11 +56,12 @@ public class ProfileActivity extends AppCompatActivity {
             /** fields data **/
             ((TextView) findViewById(R.id.fullNameInProfile)).setText((user.getUsername().isEmpty()?user.getFirstName():user.getUsername()));
             Log.i("user",user.toString());
-            /*
+
             if(user.getPictureURL()!=null){
-                ((ImageView)findViewById(R.id.userImgProfile)).setImageURI(Uri.parse(user.getPictureURL()));
+                Picasso.with(getApplicationContext()).load(Uri.parse(user.getPictureURL())).into((ImageView)findViewById(R.id.userImgProfile));
+                Log.d("uri",Uri.parse(user.getPictureURL()).toString());
             }
-            else*/
+            else
                 Picasso.with(getApplicationContext()).load(R.drawable.user_empty_profile_picture).into((ImageView)findViewById(R.id.userImgProfile));
         }
     }
